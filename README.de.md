@@ -4,7 +4,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## A. Further Tutorials
 
-* Coming soon..
+* In Bearbeitung...
 
 ## B. Sources
 
