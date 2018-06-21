@@ -2,7 +2,7 @@
 
 Eine Anleitung um Web-Anwendungen abzusichern.
 
-## A. Further Tutorials
+## A. Weitere Anleitungen
 
 * In Bearbeitung...
 
