@@ -1,6 +1,6 @@
 # Web Application Security
 
-A tutorial to protect web applications. You can read the german version [here](README.de.md).
+Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## A. Further Tutorials
 
