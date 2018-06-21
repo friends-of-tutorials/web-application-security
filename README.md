@@ -9,6 +9,7 @@ A tutorial to protect web applications. You can read the german version [here](R
 ## B. Sources
 
 * [htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
+* [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)
 
 ## C. Authors
 
