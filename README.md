@@ -11,6 +11,7 @@ A tutorial to protect web applications. You can read the german version [here](R
 * [htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
 * [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)
 * [Checklist for the secure provision of web offers with WordPress](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi_web_server_checkliste_WordPress.pdf?__blob=publicationFile&v=2) (german)
+* [Checklist for the secure provision of web offers with TYPO3](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi_web_server_checkliste_Typo3.pdf?__blob=publicationFile&v=2) (german)
 
 ## C. Authors
 
