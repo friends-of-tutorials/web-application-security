@@ -6,7 +6,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 * In Bearbeitung...
 
-## B. Sources
+## B. Quellen
 
 * [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)
 * [Open Web Application Security Project (Wikipedia)](https://en.wikipedia.org/wiki/OWASP)
@@ -18,10 +18,10 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 * [BSI-Checkliste zum sicheren Bereitstellen von Web-Angeboten mit Joomla!](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi_web_server_checkliste_Joomla.pdf?__blob=publicationFile&v=4)
 * [htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
 
-## C. Authors
+## C. Autoren
 
 * Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
 
-## D. License
+## D. Lizenz
 
-This tutorial is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details
+Dieses Tutorial steht unter der MIT-Lizenz - siehe die Datei [LICENSE.md](/LICENSE.md) für weitere Informationen.
