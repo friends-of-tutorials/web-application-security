@@ -20,7 +20,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## C. Autoren
 
-* Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
+* Björn Hempel <bjoern@hempel.li> - _Erste Arbeiten_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
 
 ## D. Lizenz
 
