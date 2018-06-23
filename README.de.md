@@ -4,7 +4,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## 1. Sicherheitskonzepte via Headereinstellungen
 
-Headereinstellungen können je nach verwendeten Webserver via seinen Webservereinstellungen, via `.htaccess`-Datei (Apache) oder direkt in der Webanwendung selbst vorgenommen werden (via Scriptsprache wie PHP, Ruby, Python, etc.). 
+Headereinstellungen können je nach verwendeten Webserver via seinen Webservereinstellungen, via `.htaccess`-Datei (NCSA-Server kompatible Webserver) oder direkt in der Webanwendung selbst vorgenommen werden (via Scriptsprache wie PHP, Ruby, Python, etc.). 
 
 ### 1.1 Vorbetrachtungen
 
