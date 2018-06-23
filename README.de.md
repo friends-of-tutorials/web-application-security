@@ -14,7 +14,7 @@ In Bearbeitung...
 
 #### 1.1.2 `.htaccess`
 
-Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird der Aufruf des Backends TYPO3 (`/typo3/`), der Aufruf von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
+Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird in diesem Beispiel der Aufruf des Backends TYPO3 (`/typo3/`), der Aufruf von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
 
 ```bash
 # ----------------------------------------------------------------------
@@ -33,11 +33,15 @@ Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkenne
 </IfModule>
 ```
 
-Mit Hilfe der zur Verfügung stehenden "Variablen" `content-type-default`, `content-type-assets` und `content-type-typo3` werden dann in den nachfolgenden Beispielen entsprechend die Header gesetzt.
+Mit Hilfe der nun zur Verfügung stehenden Variablen `content-type-default`, `content-type-assets` und `content-type-typo3` können dann in den nachfolgenden Beispielen entsprechend die Header gesetzt werden.
 
 #### 1.1.3 PHP
 
 In Bearbeitung...
+
+### 1.2 XSS
+
+Durch XSS oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode in die Webseite einzuschleusen. Dieser ungewollte Schadcode wird dann im Client dem Browser ausgeführt und ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking](https://de.wikipedia.org/wiki/Session_Hijacking)).
 
 ## A. Weitere Anleitungen
 
