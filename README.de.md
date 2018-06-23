@@ -55,10 +55,14 @@ In Bearbeitung...
 * [BSI-Checkliste zum sicheren Bereitstellen von Web-Angeboten mit Joomla!](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi_web_server_checkliste_Joomla.pdf?__blob=publicationFile&v=4)
 * [htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
 
-## C. Autoren
+## C. Fußnoten
+
+* 1 - z.B. der Apache Webserver mit aktivierten mod_rewrite
+
+## D. Autoren
 
 * Björn Hempel <bjoern@hempel.li> - _Erste Arbeiten_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
 
-## D. Lizenz
+## E. Lizenz
 
 Dieses Tutorial steht unter der MIT-Lizenz - siehe die Datei [LICENSE.md](/LICENSE.md) für weitere Informationen.
