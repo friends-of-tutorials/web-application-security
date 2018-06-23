@@ -109,7 +109,7 @@ Eine gute Idee ist es das Projekt anfangs komplett einzuschränken und nachträg
 </IfModule>
 ```
 
-Blockierte Quellen können problemlos über die Entwicklerkonsole eingesehen werden:
+Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vertrauenswürdigen Quellen auf die eigene Seite. Die blockierten Quellen können problemlos über die Entwicklerkonsole eingesehen werden:
 
 <img alt="Blockierte Scriptausführungen" src="/images/console.log.1.png" width="584">
 
