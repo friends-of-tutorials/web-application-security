@@ -111,7 +111,7 @@ Eine gute Idee ist es das Projekt anfangs komplett einzuschränken und nachträg
 
 Blockierte Quellen können problemlos über die Entwicklerkonsole eingesehen werden:
 
-
+[![Blockierte Scriptausführungen](/images/console.log.1.png)](/images/console.log.1.png)
 
 ## A. Weitere Anleitungen
 
