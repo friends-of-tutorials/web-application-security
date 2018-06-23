@@ -153,6 +153,26 @@ In Bearbeitung...
 
 In Bearbeitung...
 
+### 1.5 Auflisten von Ordnerinhalten
+
+In Bearbeitung...
+
+#### 1.5.1 Problem
+
+In Bearbeitung...
+
+#### 1.5.2 Lösung
+
+In Bearbeitung...
+
+#### 1.5.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.5.4 Hinweise
+
+In Bearbeitung...
+
 ## A. Weitere Anleitungen
 
 * [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
