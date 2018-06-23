@@ -56,9 +56,9 @@ Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, 
 * Inline-Scripting verbieten und in externe Dateien auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
 
-#### 1.2.2 Lösung
+#### 1.2.2 Lösung (Content Security Policy)
 
-Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz.
+Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Dieser gewünschten Regeln werden über die HTTP-Header ausgespielt.
 
 ## A. Weitere Anleitungen
 
