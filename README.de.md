@@ -73,7 +73,7 @@ Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die E
 
 #### 1.2.3 Beispiel via `.htaccess`
 
-Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit der Inline-Script Einschränkung nicht mehr funktionieren, so muss dieses angepasst werden (`content-type-typo3`):
+Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`):
 
 ```bash
 # ----------------------------------------------------------------------
