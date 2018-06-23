@@ -2,7 +2,7 @@
 
 Eine Anleitung um Web-Anwendungen abzusichern.
 
-## 1. Sicherheitskonzepte via Headereinstellungen anwendbar
+## 1. Sicherheitskonzepte via Headereinstellungen
 
 Headereinstellungen können je nach verwendeten Webserver via Webservereinstellungen, via `.htaccess`-Datei (Apache) oder direkt in der Webanwendung selbst vorgenommen werden. 
 
