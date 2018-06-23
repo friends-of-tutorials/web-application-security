@@ -8,7 +8,11 @@ Headereinstellungen können je nach verwendeten Webserver via Webservereinstellu
 
 ### 1.1 Vorbetrachtungen
 
-#### 1.1.1 via `.htaccess`
+#### 1.1.1 Webservereinstellungen
+
+In Bearbeitung...
+
+#### 1.1.2 `.htaccess`
 
 Nachfolgend Einstellungen in der `.htaccess`, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird der Aufruf des Backends TYPO3 (`/typo3/`), von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
 
@@ -30,6 +34,10 @@ Nachfolgend Einstellungen in der `.htaccess`, um verschiedene Inhaltsaufrufe zu 
 ```
 
 Mit Hilfe der zur Verfügung stehenden "Variablen" `content-type-default`, `content-type-assets` und `content-type-typo3` werden dann in den nachfolgenden Beispielen entsprechend die Header gesetzt.
+
+#### 1.1.3 PHP
+
+In Bearbeitung...
 
 ## A. Weitere Anleitungen
 
