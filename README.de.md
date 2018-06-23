@@ -61,7 +61,7 @@ Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session
   * Einbinden fremder Quellen in das Webprojekt (z.B. über die Paketverwaltung: npm, composer, etc.)
   * etc.
 
-Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es eine gute Idee den Import zu überwachen und zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Variante zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
+Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es immer eine gute Idee den Import zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Variante zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
 
 * Inline-Scripting generell verbieten und in externe Dateien an vertrauenswürdigen Quellen auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
@@ -69,7 +69,7 @@ Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, 
 
 #### 1.2.2 Lösung (Content Security Policy)
 
-Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Dieser gewünschten Regeln werden über die HTTP-Header ausgespielt.
+Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Script-Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Die gewünschten Regeln werden über die [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> ausgespielt.
 
 #### 1.2.3 Beispiel via `.htaccess`
 
@@ -81,11 +81,37 @@ Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scriptin
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header set Content-Security-Policy "script-src 'self' https://code.jquery.com;" env=content-type-default
-    Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval'" env=content-type-typo3
+    Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval';" env=content-type-typo3
 </IfModule>
 ```
 
-**Hinweis:** Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer überschaubaren Anzahl von vertrauenswürdigen Script-Quellen auszukommen.
+#### 1.2.4 Hinweise
+
+Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer überschaubaren Anzahl von vertrauenswürdigen Script-Quellen auszukommen.
+
+Generell empfehle ich jedem sich tiefer mit dem Thema [Content Security Policy](https://content-security-policy.com/) zu beschäftigen. Neben dem Scripting können hierüber hinaus auch andere Datenquellen eingeschränkt und abgeschottet werden:
+
+* Gültiger Standard (`default-src`)
+* Gültige Quellen für XMLHttpRequest (AJAX), WebSocket und EventSources-Verbindungen (`connect-src`)
+* Gültige Quellen für Stylesheets (`style-src`)
+* Gültige Bild-Quellen (`img-src`)
+* Gültige Schriftquellen (`font-src`)
+* etc.
+
+Eine gute Idee ist es das Projekt anfangs komplett einzuschränken und nachträglich zusätzlich benötigte und vertrauenswürdige Quellen hinzuzufügen:
+
+```bash
+# ----------------------------------------------------------------------
+# | Content Security Policy (CSP)                                      |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self';"
+</IfModule>
+```
+
+Blockierte Quellen können problemlos über die Entwicklerkonsole eingesehen werden:
+
+
 
 ## A. Weitere Anleitungen
 
