@@ -4,7 +4,7 @@ A tutorial to protect web applications. You can read the german version [here](R
 
 ## A. Further Tutorials
 
-* Coming soon..
+* [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
 
 ## B. Sources
 
