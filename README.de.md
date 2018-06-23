@@ -14,7 +14,7 @@ In Bearbeitung...
 
 #### 1.1.2 `.htaccess`
 
-Nachfolgend Einstellungen in der `.htaccess`, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird der Aufruf des Backends TYPO3 (`/typo3/`), von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
+Nachfolgend Einstellungen in der `.htaccess`, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird der Aufruf des Backends TYPO3 (`/typo3/`), der Aufruf von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
 
 ```bash
 # ----------------------------------------------------------------------
