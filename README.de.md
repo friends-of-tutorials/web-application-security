@@ -41,11 +41,11 @@ In Bearbeitung...
 
 ### 1.2 XSS
 
-Durch [XSS<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Cross-Site-Scripting) oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode auf der Webseite auszuführen.
+Durch [XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting)<sup>Wikipedia</sup> oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode auf der Webseite auszuführen.
 
 #### 1.2.1 Problem
 
-Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Session_Hijacking)). Ungewollter Fremdcode kann überall dort in das Webprojekt gelangen, wo Daten in das Projekt zur Auswertung importiert oder zur Datenspeicherung übertragen werden:
+Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking](https://de.wikipedia.org/wiki/Session_Hijacking)<sup>Wikipedia</sup>). Ungewollter Fremdcode kann überall dort in das Webprojekt gelangen, wo Daten in das Projekt zur Auswertung importiert oder zur Datenspeicherung übertragen werden:
 
 * Suchformular
 * Eingabemasken (Kommentare, Gästebuch, etc.)
@@ -58,7 +58,7 @@ Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, 
 
 #### 1.2.2 Lösung
 
-Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Content_Security_Policy)-Ansatz.
+Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wikipedia</sup>-Ansatz.
 
 ## A. Weitere Anleitungen
 
