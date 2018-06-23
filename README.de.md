@@ -51,6 +51,8 @@ Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session
 * Eingabemasken
   * Kommentare
   * Gästebuch
+  * Emailversand-Formulare
+  * Kontakt-Formulare
   * etc.
 * Datenimporte
   * API-Anbindungen fremder Quellen
