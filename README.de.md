@@ -41,7 +41,7 @@ In Bearbeitung...
 
 ### 1.2 XSS
 
-Durch [XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting)<sup>Wiki</sup> oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode auf der Webseite auszuführen.
+Durch [XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting)<sup>Wiki</sup> oder auch webseitenübergreifendem Skripting ist es dem Angreifer möglich ungewollt Schadcode auf der Webseite auszuführen.
 
 #### 1.2.1 Problem
 
