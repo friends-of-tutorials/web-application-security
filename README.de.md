@@ -31,7 +31,7 @@ Mit Hilfe der zur Verfügung stehenden "Variablen" `content-type-default`, `cont
 
 ## A. Weitere Anleitungen
 
-* In Bearbeitung...
+* [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
 
 ## B. Quellen
 
