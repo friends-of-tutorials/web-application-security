@@ -113,6 +113,26 @@ Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vert
 
 <img alt="Blockierte Scriptausführungen" src="/images/console.log.1.png" width="584">
 
+### 1.3 Clickjacking
+
+In Bearbeitung...
+
+#### 1.3.1 Problem
+
+In Bearbeitung...
+
+#### 1.3.2 Lösung
+
+In Bearbeitung...
+
+#### 1.3.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.3.4 Hinweise
+
+In Bearbeitung...
+
 ## A. Weitere Anleitungen
 
 * [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
