@@ -48,17 +48,42 @@ Durch [XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting)<sup>Wiki</sup> o
 Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking](https://de.wikipedia.org/wiki/Session_Hijacking)<sup>Wiki</sup>). Ungewollter Fremdcode kann überall dort in das Webprojekt gelangen, wo Daten in das Projekt zur Auswertung importiert oder zur Datenspeicherung übertragen werden:
 
 * Suchformular
-* Eingabemasken (Kommentare, Gästebuch, etc.)
-* Datenimporte (API-Anbindungen, Parsing, Datenbankimporte fremder Quellen, etc.)
+* Eingabemasken
+  * Kommentare
+  * Gästebuch
+  * etc.
+* Datenimporte
+  * API-Anbindungen fremder Quellen
+  * Parsing von fremden Quellen
+  * Datenbankimporte fremder Quellen
+  * Einbinden fremder Quellen in das Webprojekt (z.B. über die Paketverwaltung: npm, composer, etc.)
+  * etc.
 
 Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es eine gute Idee den Import zu überwachen und zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Variante zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
 
-* Inline-Scripting verbieten und in externe Dateien auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
+* Inline-Scripting generell verbieten und in externe Dateien an vertrauenswürdigen Quellen auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
+* Alle anderen Quellen als die vertrauenswürdigen verbieten
 
 #### 1.2.2 Lösung (Content Security Policy)
 
 Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Dieser gewünschten Regeln werden über die HTTP-Header ausgespielt.
+
+#### 1.2.3 Beispiel via `.htaccess`
+
+Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit der Inline-Script Einschränkung nicht mehr funktionieren, so muss dieses angepasst werden (`content-type-typo3`):
+
+```bash
+# ----------------------------------------------------------------------
+# | Content Security Policy (CSP)                                      |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "script-src 'self' https://code.jquery.com;" env=content-type-default
+    Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval'" env=content-type-typo3
+</IfModule>
+```
+
+**Hinweis:** Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer überschaubaren Anzahl von vertrauenswürdigen Script-Quellen auszukommen.
 
 ## A. Weitere Anleitungen
 
