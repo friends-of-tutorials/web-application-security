@@ -173,6 +173,26 @@ In Bearbeitung...
 
 In Bearbeitung...
 
+### 1.6 Versteckte Ordner
+
+In Bearbeitung... (.git, etc.)
+
+#### 1.6.1 Problem
+
+In Bearbeitung...
+
+#### 1.6.2 Lösung
+
+In Bearbeitung...
+
+#### 1.6.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.6.4 Hinweise
+
+In Bearbeitung...
+
 ## A. Weitere Anleitungen
 
 * [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
