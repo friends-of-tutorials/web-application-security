@@ -2,11 +2,13 @@
 
 Eine Anleitung um Web-Anwendungen abzusichern.
 
-## 1. Sicherheitskonzepte via Header
+## 1. Sicherheitskonzepte via Headereinstellungen anwendbar
+
+Headereinstellungen können je nach verwendeten Webserver via Webservereinstellungen, via `.htaccess`-Datei (Apache) oder direkt in der Webanwendung selbst vorgenommen werden. 
 
 ### 1.1 Vorbetrachtungen
 
-#### 1.1.1 via .htaccess
+#### 1.1.1 via `.htaccess`
 
 Nachfolgend Einstellungen in der `.htaccess`, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird der Aufruf des Backends TYPO3 (`/typo3/`), von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
 
