@@ -193,6 +193,32 @@ In Bearbeitung...
 
 In Bearbeitung...
 
+### 1.7 Sichere Cookies
+
+In Bearbeitung... (.git, etc.)
+
+#### 1.7.1 Problem
+
+In Bearbeitung...
+
+#### 1.7.2 Lösung
+
+In Bearbeitung...
+
+#### 1.7.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.7.4 Hinweise
+
+In Bearbeitung...
+
+#### 1.10 Anderes
+
+* X-Powered-By
+* ServerSignature
+* 
+
 ## A. Weitere Anleitungen
 
 * [A tutorial to securely transfer messages](https://github.com/friends-of-tutorials/securely-transfer-messages)
