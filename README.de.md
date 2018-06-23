@@ -41,7 +41,24 @@ In Bearbeitung...
 
 ### 1.2 XSS
 
-Durch XSS oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode in die Webseite einzuschleusen. Dieser ungewollte Schadcode wird dann im Client dem Browser ausgeführt und ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking](https://de.wikipedia.org/wiki/Session_Hijacking)).
+Durch [XSS<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Cross-Site-Scripting) oder auch webseitenübergreifendem Skripting ist es möglich ungewollt Schadcode auf der Webseite auszuführen.
+
+#### 1.2.1 Problem
+
+Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session-Daten zu entwenden ([Session Hijacking<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Session_Hijacking)). Ungewollter Fremdcode kann überall dort in das Webprojekt gelangen, wo Daten in das Projekt zur Auswertung importiert oder zur Datenspeicherung übertragen werden:
+
+* Suchformular
+* Eingabemasken (Kommentare, Gästebuch, etc.)
+* Datenimporte (API-Anbindungen, Parsing, Datenbankimporte fremder Quellen, etc.)
+
+Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es eine gute Idee den Import zu überwachen und zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Variante zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
+
+* Inline-Scripting verbieten und in externe Dateien auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
+* Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
+
+#### 1.2.2 Lösung
+
+Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy<sup>Wikipedia</sup>](https://de.wikipedia.org/wiki/Content_Security_Policy)-Ansatz.
 
 ## A. Weitere Anleitungen
 
