@@ -63,7 +63,7 @@ Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session
 
 Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es immer eine gute Idee alle möglichen Import zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Variante zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
 
-* Inline-Scripting generell verbieten und in externe Dateien in vertrauenswürdige Quellen auslagern (die Unterscheidung von eigenem Code zu schadhaften Code ist beim Inline-Scripting besonders schwierig)
+* Inline-Scripting generell verbieten und in externe Dateien in vertrauenswürdige Quellen auslagern, weil die Unterscheidung von eigenem (gutartigem) Code zu schadhaften Code beim Inline-Scripting besonders schwierig ist
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
 * Alle anderen Quellen als die vertrauenswürdigen verbieten
 
