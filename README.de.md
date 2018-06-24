@@ -115,15 +115,15 @@ Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vert
 
 ### 1.3 Clickjacking
 
-Durch [Clickjacking](https://de.wikipedia.org/wiki/Clickjacking)<sup>Wiki</sup> ist es dem Angreifer möglich Clicks und Tastatureingaben für den Benutzer unbemerkt auf der eingebundenen Seite auszuführen bzw. Usereingaben abzufangen.
+Durch [Clickjacking](https://de.wikipedia.org/wiki/Clickjacking)<sup>Wiki</sup> ist es dem Angreifer möglich Clicks und Tastatureingaben für den Benutzer unbemerkt auf der eingebundenen Seite auszuführen bzw. diese Usereingaben abzufangen.
 
 #### 1.3.1 Problem
 
-Manchmal gewünscht, meist jedoch nicht und unbekannt, wird durch das Einbinden der eigenen Seite auf einer fremden Seiten die Möglichkeit geschaffen unsichtbare oder sichtbare Layer über diese zu legen. Mit diesen Layern ist es möglich Usereingaben abzufangen oder an die eingebundene Seite durchzureichen. Im noch "günstigsten" Fall wird ein Objekt z.B. über einen Like Button gelegt, welcher bei Click auf das Objekt die Aktionen des Like Buttons der eingebundenen Seite durchführt. In einem kritischeren Fall wird über eine Logineingabe der eingebundenen Seite eine unsichtbare Maske gelegt. Statt die Login-Daten wie erwartet in der eingebundenen Seite einzugeben und abzuschicken, werden die Daten in eine unsichtbar darüberliegenden Login-Form eingegeben und abgesendet. Die übergeordnete Seite besitzt nun die Login-Daten.
+Manchmal gewünscht, meist jedoch nicht und unbekannt, wird durch das Einbinden der eigenen Seite auf einer fremden dem Angreifer gehörenden Seiten die Möglichkeit geschaffen unsichtbare oder sichtbare Layer über diese zu legen. Mit diesen Layern ist es möglich Usereingaben abzufangen oder an die eingebundene Seite durchzureichen. Im noch "günstigsten" Fall wird ein Objekt z.B. über einen Like Button gelegt, welcher bei Click auf das Objekt die Aktionen des Like Buttons der eingebundenen Seite durchführt. In einem kritischeren Fall wird über eine Logineingabe der eingebundenen Seite eine unsichtbare Maske gelegt. Statt die Login-Daten wie erwartet in der eingebundenen Seite einzugeben und abzuschicken, werden die Daten in eine unsichtbar darüberliegenden Login-Form eingegeben und an den Angreifer gesendet. Die Angreifer besitzt nun die Login-Daten des eingebundenen Projektes.
 
-#### 1.3.2 Lösung
+#### 1.3.2 Lösung (`X-Frame-Options`)
 
-In Bearbeitung...
+Ein Lösungsansatz ist das Einbinden der eigenen Seite auf anderen Seiten zu verbieten. Hierfür bieten die Browser die Möglichkeit dies über den [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> zu steuern. Per Default ist es möglich, jede Seite auf jeder anderen Seite einzubinden. Mögliche Optionen für den Header `X-Frame-Options`  finden sich z.B. hier: [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 
 #### 1.3.3 Beispiel via `.htaccess`
 
