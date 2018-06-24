@@ -254,7 +254,15 @@ In Bearbeitung...
 
 #### 1.7.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
+```bash
+# ----------------------------------------------------------------------
+# | Secure Cookies                              |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header edit Set-Cookie "^(.*)$" "$1; HttpOnly; Secure" env=content-type-default
+    Header edit Set-Cookie "^(.*)$" "$1; Secure" env=content-type-typo3
+</IfModule>
+```
 
 #### 1.7.4 Hinweise
 
