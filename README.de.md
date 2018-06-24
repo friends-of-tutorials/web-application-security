@@ -169,7 +169,18 @@ In Bearbeitung...
 #### 1.4.3 Beispiel via `.htaccess`
 
 ```bash
-# TODO
+# enable redirection
+RewriteEngine On
+
+# redirect nonwww to www (ignore /.well-known)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{REQUEST_URI} !^/.well-known
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# redirect http to https (ignore /.well-known)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/.well-known
+RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
 
 # ----------------------------------------------------------------------
 # | HTTP Strict Transport Security (HSTS)                              |
