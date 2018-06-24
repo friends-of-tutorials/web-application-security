@@ -98,7 +98,7 @@ Generell empfehle ich jedem während der Webentwicklung sich tiefer mit dem Them
 * Gültige Schriftquellen (`font-src`)
 * etc.
 
-Eine gute Idee ist es das Projekt anfangs komplett einzuschränken und nachträglich zusätzlich benötigte und vertrauenswürdige Quellen hinzuzufügen:
+Eine gute Idee ist es das Projekt während der Entwicklung anfangs komplett einzuschränken und nachträglich zusätzlich benötigte und vertrauenswürdige Quellen hinzuzufügen:
 
 ```bash
 # ----------------------------------------------------------------------
