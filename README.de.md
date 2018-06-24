@@ -123,7 +123,7 @@ Manchmal gewünscht, meist jedoch nicht und unbekannt, wird durch das Einbinden 
 
 #### 1.3.2 Lösung (`X-Frame-Options`)
 
-Ein Lösungsansatz ist das Einbinden der eigenen Seite auf anderen Seiten zu verbieten. Hierfür bieten die Browser die Möglichkeit dies über den [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> zu steuern. Per Default ist es möglich, jede Seite auf jeder anderen Seite einzubinden. Mögliche Optionen für den Header `X-Frame-Options`  finden sich z.B. hier: [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+Ein Lösungsansatz ist das Einbinden der eigenen Seite auf anderen Seiten zu verbieten. Hierfür bieten die Browser die Möglichkeit dies über den [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> `X-Frame-Options` zu steuern. Per Default ist es möglich, jede Seite auf jeder anderen Seite einzubinden. Mögliche Optionen für den Header `X-Frame-Options`  finden sich z.B. hier: [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 
 #### 1.3.3 Beispiel via `.htaccess`
 
