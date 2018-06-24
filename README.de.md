@@ -115,11 +115,11 @@ Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vert
 
 ### 1.3 Clickjacking
 
-In Bearbeitung...
+Durch [Clickjacking](https://de.wikipedia.org/wiki/Clickjacking)<sup>Wiki</sup> ist es dem Angreifer möglich Clicks und Tastatureingaben für den Benutzer unbemerkt auf der eingebundenen Seite auszuführen bzw. Usereingaben abzufangen.
 
 #### 1.3.1 Problem
 
-In Bearbeitung...
+Manchmal gewünscht, meist jedoch nicht und unbekannt, wird durch das Einbinden der eigenen Seite auf einer fremden Seiten die Möglichkeit geschaffen unsichtbare oder sichtbare Layer über diese zu legen. Mit diesen Layern ist es möglich Usereingaben abzufangen oder an die eingebundene Seite durchzureichen. Im noch "günstigsten" Fall wird ein Objekt z.B. über einen Like Button gelegt, welcher bei Click auf das Objekt die Aktionen des Like Buttons der eingebundenen Seite durchführt. In einem kritischeren Fall wird über eine Logineingabe der eingebundenen Seite eine unsichtbare Maske gelegt. Statt die Login-Daten wie erwartet in der eingebundenen Seite einzugeben und abzuschicken, werden die Daten in eine unsichtbar darüberliegenden Login-Form eingegeben und abgesendet. Die übergeordnete Seite besitzt nun die Login-Daten.
 
 #### 1.3.2 Lösung
 
