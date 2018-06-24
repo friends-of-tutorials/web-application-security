@@ -145,7 +145,7 @@ Ein Verzicht auf das Einbinden der eigenen Seite in andere Seite sollte das Ziel
 
 ### 1.4 Zwang der verschlüsselten Übertragung
 
-Nur sichere, verschlüsselte Verbindungen ([HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure)<sup>Wiki</sup>, HTTP Secure, HTTP + SSL/TLS, etc.) erfüllen die drei wichtigsten Regeln der Informationssicherheit ([Vertraulichkeit](https://de.wikipedia.org/wiki/Vertraulichkeit), [Integrität](https://de.wikipedia.org/wiki/Integrit%C3%A4t_(Informationssicherheit))<sup>Wiki</sup>, [Authentizität](https://de.wikipedia.org/wiki/Authentizit%C3%A4t)<sup>Wiki</sup>)
+Nur sichere, verschlüsselte Verbindungen ([HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure)<sup>Wiki</sup>, HTTP Secure, HTTP + SSL/TLS, etc.) erfüllen die drei wichtigsten Regeln der Informationssicherheit ([Vertraulichkeit](https://de.wikipedia.org/wiki/Vertraulichkeit)<sup>Wiki</sup>, [Integrität](https://de.wikipedia.org/wiki/Integrit%C3%A4t_(Informationssicherheit))<sup>Wiki</sup>, [Authentizität](https://de.wikipedia.org/wiki/Authentizit%C3%A4t)<sup>Wiki</sup>)
 
 #### 1.4.1 Problem
 
