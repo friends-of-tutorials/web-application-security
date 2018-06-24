@@ -143,7 +143,7 @@ Das nachfolgende Beispiel erlaubt das Einbinden der eigenen Seite innerhalb der 
 
 Ein Verzicht auf das Einbinden der eigenen Seite in andere Seite sollte das Ziel sein und ist erfahrungsgemäß auch die Variante, welche am meisten auftritt. Ein Setzen und eine Einschränkung über die Verwendung des Headers `X-Frame-Options` ist wie im obigen Beispiel daher meist unproblematisch.
 
-### 1.4 Zwang der verschlüsselten Übertragung
+### 1.4 Zwang der verschlüsselten Übertragung (HTTPS)
 
 Nur sichere, verschlüsselte Verbindungen ([HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure)<sup>Wiki</sup>, HTTP Secure, HTTP + SSL/TLS, etc.) erfüllen die drei wichtigsten Regeln der Informationssicherheit: [Vertraulichkeit](https://de.wikipedia.org/wiki/Vertraulichkeit)<sup>Wiki</sup>, [Integrität](https://de.wikipedia.org/wiki/Integrit%C3%A4t_(Informationssicherheit))<sup>Wiki</sup> und [Authentizität](https://de.wikipedia.org/wiki/Authentizit%C3%A4t)<sup>Wiki</sup>
 
@@ -166,7 +166,16 @@ In Bearbeitung...
 
 #### 1.4.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
+```bash
+# TODO
+
+# ----------------------------------------------------------------------
+# | HTTP Strict Transport Security (HSTS)                              |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
+```
 
 #### 1.4.4 Hinweise
 
@@ -257,14 +266,18 @@ In Bearbeitung...
 * [BSI-Checkliste zum sicheren Bereitstellen von Web-Angeboten mit Joomla!](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi_web_server_checkliste_Joomla.pdf?__blob=publicationFile&v=4)
 * [htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
 
-## C. Fußnoten
+## C. Tools
+
+* [https://securityheaders.com](https://securityheaders.com)
+
+## D. Fußnoten
 
 * <sup>1</sup> = z.B. der Apache Webserver mit entsprechend aktivierten Modulen (z.B. [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) oder [mod_headers](http://httpd.apache.org/docs/current/mod/mod_headers.html))
 
-## D. Autoren
+## E. Autoren
 
 * Björn Hempel <bjoern@hempel.li> - _Erste Arbeiten_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
 
-## E. Lizenz
+## F. Lizenz
 
 Dieses Tutorial steht unter der MIT-Lizenz - siehe die Datei [LICENSE.md](/LICENSE.md) für weitere Informationen.
