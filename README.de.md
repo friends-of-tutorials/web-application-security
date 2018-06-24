@@ -87,7 +87,7 @@ Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scriptin
 
 #### 1.2.4 Hinweise
 
-Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer überschaubaren Anzahl von vertrauenswürdigen Script-Quellen auszukommen.
+Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer überschaubaren Anzahl von vertrauenswürdigen Script-Quellen auszukommen. Auch die Verwendung von Text zu Javascript umwandelnden Funktionen (`eval`) sollte strikt vermieden werden.
 
 Generell empfehle ich jedem während der Webentwicklung sich tiefer mit dem Thema [Content Security Policy](https://content-security-policy.com/) zu beschäftigen. Neben dem Scripting können hierüber hinaus auch andere Datenquellen eingeschränkt und abgeschottet werden:
 
