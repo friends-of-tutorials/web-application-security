@@ -127,11 +127,21 @@ Ein Lösungsansatz ist das Einbinden der eigenen Seite auf anderen Seiten zu ver
 
 #### 1.3.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
+Das nachfolgende Beispiel erlaubt das Einbinden der eigenen Seite innerhalb der eigenen Domain und verbietet es für andere Domains: 
+
+```bash
+# ----------------------------------------------------------------------
+# | Clickjacking                                                       |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN" env=content-type-default
+    Header set X-Frame-Options "SAMEORIGIN" env=content-type-typo3
+</IfModule>
+```
 
 #### 1.3.4 Hinweise
 
-In Bearbeitung...
+Ein Verzicht auf das Einbinden der eigenen Seite in andere Seite sollte das Ziel sein und ist erfahrungsgemäß auch die Variante, welche am meisten auftritt. Ein Setzen und eine Einschränkung über die Verwendung des Headers `X-Frame-Options` ist wie im obigen Beispiel daher meist unproblematisch.
 
 ### 1.4 Zwang der verschlüsselten Übertragung
 
