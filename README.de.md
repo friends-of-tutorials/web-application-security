@@ -149,7 +149,16 @@ Nur sichere, verschlüsselte Verbindungen ([HTTPS](https://de.wikipedia.org/wiki
 
 #### 1.4.1 Problem
 
-In Bearbeitung...
+Unsichere, unverschlüsselte Verbindung können abgehört und verändert werden. Gerade wenn nicht bekannt ist welche Übertragungsmedien verwendet werden (offenes WLAN, etc.) ist es ohne großen Aufwand möglich übertragene Daten abzuhören. Besonders problematisch ist dies bei:
+
+* Loginformularen (Zugangsdaten)
+* der Übertragung von bedenklichen und bedeutenden Informationen (Kreditkartendaten, etc.)
+* besonders zu schützenden Daten (personenbezogene Daten, etc.)
+
+Weiterhin problematisch sind unbemerkt veränderte Daten, während man sich auf einer sicheren Seite wähnt:
+
+* kompromitierte Downloads (Viren, Trojaner, Spyware und andere Schadprogramme)
+* Falschinformationen (während der Übertragung zum Ziel geänderte Daten)
 
 #### 1.4.2 Lösung
 
