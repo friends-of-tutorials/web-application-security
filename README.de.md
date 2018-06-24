@@ -234,7 +234,14 @@ In Bearbeitung...
 
 #### 1.6.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
+```bash
+# ----------------------------------------------------------------------
+# | Block access to vcs directories (Git, SVN, Mercurial               |
+# ----------------------------------------------------------------------
+<IfModule mod_alias.c>
+    RedirectMatch 404 /\.(?:git|svn|hg)/
+</IfModule>
+```
 
 #### 1.6.4 Hinweise
 
