@@ -283,15 +283,35 @@ In Bearbeitung...
 
 ### 1.8 Zu schützende Ordner und Dateien
 
-In Bearbeitung...
+Es gibt Bereiche auf der Webseite (z.B. das Backend, Infodateien, etc.), welche nicht für die Öffentlichkeit bestimmt sind. Diese sollten auch nicht öffentlich erreichbar sein und vor unberechtigtem Zugriff geschützt werden.
 
 #### 1.8.1 Problem
 
-In Bearbeitung...
+Besonders zu schützende und nicht der Öffentlichkeit vorgehaltene Bereiche sollten einen erweiterten Schutz erhalten. Dies kann z.B. ein zusätzlicher Verzeichnisschutz sein und erschwert z.B. Angreifern das Ausspionieren von wichtigen Informationen oder Angriffe auf bekannte Sicherheitslücken. Besonders zu schützende Bereiche sind z.B.:
+
+* Backenzugriffe
+  * TYPO3: `/typo3`
+  * Contao: `/contao`
+  * Wordpress: `/wp-admin`
+* Informationsseiten
+  * Webserverinformationen, wie `/server-status` oder `/nginx_status`
+  * Projektinformationen, wie `info.php`
+
+Weitere sensible Bereiche können auch in der `robots.txt` ausgeschlossenen Dateien und Ordner sein (`Disallow`), wobei diese Datei problemlos von jedem Angreifer eingesehen werden kann. Diese sollten ebenfalls in den zusätzlichen Schutz mit aufgenommen werden:
+
+```bash
+User-Agent: *
+Allow: /
+Disallow: /typo3/
+Disallow: /print/
+```
 
 #### 1.8.2 Lösung
 
-In Bearbeitung...
+Eine mögliche zusätzliche Absicherung kann der schon erwähnte **Verzeichnisschutz** sein. Weitere Möglichkeiten sind:
+
+* Ausschließen der Auslieferung über den Webserver (HTTP-Statuscode 404)
+* Auslieferung der Bereiche nur über bestimmte Erkennungsmerkmale (speziell angepasster User-Agent, etc.)
 
 #### 1.8.3 Beispiel via `.htaccess`
 
@@ -312,6 +332,22 @@ In Bearbeitung...
     Order allow,deny
     Allow from env=!protected-crm
     Satisfy any
+</If>
+
+# ----------------------------------------------------------------------
+# | Block access of some areas (always)                                |
+# ----------------------------------------------------------------------
+<IfModule mod_alias.c>
+    RedirectMatch 404 /(info.php|folder1/|folder2/)/
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Block access of some areas (if the user agent does not contain     |
+# | the SPECIAL_STRING)                                                |
+# ----------------------------------------------------------------------
+<If "%{HTTP_USER_AGENT} !~ /\[SPECIAL_STRING\]/">
+    RedirectMatch 404 /log
+    RedirectMatch 404 /revision-infos
 </If>
 ```
 
