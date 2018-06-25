@@ -315,6 +315,14 @@ Eine mögliche zusätzliche Absicherung kann der schon erwähnte **Verzeichnissc
 
 #### 1.8.3 Beispiel via `.htaccess`
 
+##### 1.8.3.1 Create a `.htpasswd` file:
+
+```bash
+user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username password
+```
+
+##### 1.8.3.2 The `.htaccess` file
+
 ```bash
 # ----------------------------------------------------------------------
 # | Password protection for some areas                                 |
