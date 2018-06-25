@@ -281,7 +281,7 @@ In Bearbeitung...
 
 In Bearbeitung...
 
-### 1.8 Zu schützende Ordner und Dateien
+### 1.8 Besonders zu schützende Ordner und Dateien (nicht öffentliche Bereiche)
 
 Es gibt Bereiche auf der Webseite (z.B. das Backend, Infodateien, etc.), welche nicht für die Öffentlichkeit bestimmt sind. Diese sollten auch nicht öffentlich erreichbar sein und vor unberechtigtem Zugriff geschützt werden.
 
