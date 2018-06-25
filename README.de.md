@@ -281,7 +281,45 @@ In Bearbeitung...
 
 In Bearbeitung...
 
-#### 1.10 Anderes
+### 1.8 Zu schützende Ordner und Dateien
+
+In Bearbeitung...
+
+#### 1.8.1 Problem
+
+In Bearbeitung...
+
+#### 1.8.2 Lösung
+
+In Bearbeitung...
+
+#### 1.8.3 Beispiel via `.htaccess`
+
+```bash
+# ----------------------------------------------------------------------
+# | Password protection for some areas                                 |
+# ----------------------------------------------------------------------
+<If "%{HTTP_HOST} =~ /(www\.)?(domain1|domain2)\.de/">
+    AuthType     Basic
+    AuthName     "rsmBE"
+    AuthUserFile /var/www/path/to/web/root/current/web/.htpasswd
+    require      valid-user
+
+    # set protection env var if crucial pages are requested
+    SetEnvIfNoCase REQUEST_URI "^/(typo3/|contao/|wp-admin/|print/|wp-login.php|wp-config.php|server-status|nginx_status|info.php)" protected-crm
+
+    # Special Environments
+    Order allow,deny
+    Allow from env=!protected-crm
+    Satisfy any
+</If>
+```
+
+#### 1.8.4 Hinweise
+
+In Bearbeitung...
+
+### 1.10 Anderes
 
 * X-Powered-By
 * ServerSignature
