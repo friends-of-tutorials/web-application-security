@@ -73,7 +73,7 @@ Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die E
 
 #### 1.2.3 Beispiel via `.htaccess`
 
-Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`):
+Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`). Ältere Browser, welche den CSP Header nicht unterstützen, unterstützen unter Umständen eine ähnliche Technik [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection), welche Cross-Site-Scripting Filter aktivieren:
 
 ```bash
 # ----------------------------------------------------------------------
@@ -83,9 +83,15 @@ Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scriptin
     Header set Content-Security-Policy "script-src 'self' https://code.jquery.com;" env=content-type-default
     Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval';" env=content-type-typo3
 </IfModule>
-```
 
-**TODO:** `Header set X-XSS-Protection "1; mode=block"`
+# ----------------------------------------------------------------------
+# | X-XSS-Protection (for older browsers)                              |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block" env=content-type-default
+    Header set X-XSS-Protection "1; mode=block" env=content-type-typo3
+</IfModule>
+```
 
 #### 1.2.4 Hinweise
 
