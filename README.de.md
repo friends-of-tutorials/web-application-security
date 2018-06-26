@@ -204,7 +204,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
 
 #### 1.4.4 Hinweise
 
-Für eine verschlüsselte Verbindung wird ein signiertes Zertifikat benötigt. Diese erhält man bei einer Zertifizierungsstelle der Wahl:
+Für eine verschlüsselte Verbindung wird ein signiertes Zertifikat benötigt. Diese erhält man bei einer Zertifizierungsstelle der Wahl. Z.B.:
 
 * [Let's Encrypt](https://letsencrypt.org/) (kostenlos)
 * [Thawte](https://www.thawte.de/ssl/) (ab 129€ / Jahr)
