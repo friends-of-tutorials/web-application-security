@@ -209,6 +209,7 @@ Für eine verschlüsselte Verbindung wird ein signiertes Zertifikat benötigt. D
 * [Let's Encrypt](https://letsencrypt.org/) (kostenlos)
 * [Thawte](https://www.thawte.de/ssl/) (ab 129€ / Jahr)
 * [Host Europe](https://www.hosteurope.de/SSL-Zertifikate/) (ab 2,99€ / Monat; Reseller)
+* ...
 
 Es gibt unterschiedliche Zertifizierungstypen und somit Zertifikatstypen:
 
@@ -232,7 +233,7 @@ Ziel sollte es immer sein, die Adressdarstellung "Variante 1" zu erhalten.
 
 ### 1.5 Auflisten von Ordnerinhalten
 
-In Bearbeitung...
+Standarmäßig ist das Indexing der Dateien aktviert. Damit ist es möglich durch Aufruf von Ordnern deren Inhalt aufzulisten und deren Inhalt einzusehen.
 
 #### 1.5.1 Problem
 
@@ -244,7 +245,12 @@ In Bearbeitung...
 
 #### 1.5.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
+```bash
+# ----------------------------------------------------------------------
+# | Disable Indexing                                                   |
+# ----------------------------------------------------------------------
+Options -Indexes
+```
 
 #### 1.5.4 Hinweise
 
