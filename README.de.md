@@ -218,15 +218,15 @@ Es gibt unterschiedliche Zertifizierungstypen und somit Zertifikatstypen:
 
 Google und andere Suchmaschinen bevorzugen bei den Ergebnissen verschlüsselte Verbindungen im Ranking. Browser weisen auf unverschlüsselte Verbindungen hin bzw. lehnen teils unsichere Verbindungen ab, wenn eine Datenübermittlung stattfinden sollte (Formular). Eine erfolgreich eingerichtete Sicherheit zum Projekt allein reicht nicht. Auch eingebundene Quellen und Bibliotheken müssen gesichert eingebunden werden, damit diese im Browser als sicher eingestuft werden. Einen vollständig sicheren Aufruf erkennt man in der Adresszeile:
 
-<img alt="Sichere Verbindung" src="/images/secure.png" width="244">
+<img alt="Sichere Verbindung" src="/images/secure.png" width="244" style="border: 1px solid #808080;">
 
 Unsichere Quellen erkennt man wie folgt:
 
-<img alt="Sichere Verbindung" src="/images/not-secure.png" width="150">
+<img alt="Sichere Verbindung" src="/images/not-secure.png" width="150" style="border: 1px solid #808080;">
 
-Unsicher eingebundene Quellen erkennt man wie folgt:
+Sichere Aufrufe, jedoch unsicher eingebundene Quellen erkennt man wie folgt:
 
-<img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107">
+<img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107" style="border: 1px solid #808080;">
 
 ### 1.5 Auflisten von Ordnerinhalten
 
