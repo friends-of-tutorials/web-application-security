@@ -233,7 +233,7 @@ Ziel sollte es immer sein, die Adressdarstellung "Variante 1" zu erhalten.
 
 ### 1.5 Auflisten von Ordnerinhalten
 
-Standarmäßig ist das Indexing der Dateien aktviert. Damit ist es möglich durch Aufruf von Ordnern deren Inhalt aufzulisten und deren Inhalt einzusehen.
+Standarmäßig ist das Indexing der Dateien aktviert. Damit ist es möglich durch Aufruf von Ordnern deren Inhalt aufzulisten und den Inhalt einzusehen.
 
 #### 1.5.1 Problem
 
