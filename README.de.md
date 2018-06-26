@@ -398,8 +398,6 @@ In Bearbeitung...
 * X-Powered-By
 * ServerSignature
 * Header append X-Content-Type-Options "nosniff"
-* Header append X-XSS-Protection "1; mode=block"
-* Header append Strict-Transport-Security "max-age=16070400; includeSubDomains"
 * Header edit Set-Cookie ^(.*)$ $1;Secure env=is_live
 
 ## A. Weitere Anleitungen
