@@ -170,7 +170,7 @@ Weiterhin problematisch sind unbemerkt veränderte Daten, während man sich auf 
 
 #### 1.4.2 Lösung
 
-In Bearbeitung...
+Per default ruft der Browser standardmäßig die Seite per http Protokoll (unverschlüsselt) ab, wenn nicht das HSTS Flag gesetzt wird oder eine Umleitung per RewriteRule vorgenommen wird. Nachfolgend werden diese Einstellungen z.B. mittels `.htaccess` Datei vorgenommen.
 
 #### 1.4.3 Beispiel via `.htaccess`
 
@@ -204,7 +204,11 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
 
 #### 1.4.4 Hinweise
 
-In Bearbeitung...
+Für eine verschlüsselte Verbindung wird ein signiertes Zertifikat benötigt. Diese erhält man bei einer Zertifizierungsstelle der Wahl:
+
+* [Let's Encrypt](https://letsencrypt.org/) (kostenlos)
+* [Thawte](https://www.thawte.de/ssl/) (ab 129€ / Jahr)
+* [Host Europe](https://www.hosteurope.de/SSL-Zertifikate/) (ab 2,99€ / Monat; Reseller)
 
 ### 1.5 Auflisten von Ordnerinhalten
 
