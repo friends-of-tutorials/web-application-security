@@ -226,7 +226,7 @@ Unsichere Quellen erkennt man wie folgt:
 
 Unsicher eingebundene Quellen erkennt man wie folgt:
 
-<img alt="Sichere Verbindung" src="/images/secure-mixed.png" width="">
+<img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107">
 
 ### 1.5 Auflisten von Ordnerinhalten
 
