@@ -237,11 +237,22 @@ Standarmäßig ist das Indexing der Dateien aktviert. Damit ist es möglich durc
 
 #### 1.5.1 Problem
 
-In Bearbeitung...
+Der Webserver ruft standardmäßig die Index-Datei auf, wenn sich in dem aufgerufenen Ordner eine befindet. Index Dateien sind in diesem Fall:
+
+* index.php
+* index.html
+
+Eingestellt werden kann diese Index-Datei via:
+
+```bash
+
+```
+
+Findet der Webserver keine, so ruft dieser das Datei-Listing auf, sofern dieses nicht deaktiviert worden ist. Das Dateilisting sollte wenn nicht gesondert gefordert, deaktiviert werden.
 
 #### 1.5.2 Lösung
 
-In Bearbeitung...
+Das Datei-Listing wird wie nachfolgend angegeben deaktiviert.
 
 #### 1.5.3 Beispiel via `.htaccess`
 
