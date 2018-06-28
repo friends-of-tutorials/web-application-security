@@ -229,7 +229,7 @@ Sichere Aufrufe, jedoch unsicher eingebundene Quellen erkennt man wie folgt (*Va
 
 <kbd><img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107"></kbd> <sup>**_(Chrome)_**</sup>
 
-Ziel sollte es immer sein, die Adressdarstellung "*Variante 1*" zu erhalten.
+Ziel sollte es immer sein, die Adressdarstellung "*Variante 1*" zu erhalten. Zu erkennen an der grünen Adresszeile.
 
 ### 1.5 Auflisten von Ordnerinhalten
 
