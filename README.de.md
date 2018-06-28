@@ -221,7 +221,7 @@ Google und andere Suchmaschinen bevorzugen bei den Ergebnissen verschlüsselte V
 
 <kbd><img alt="Sichere Verbindung" src="/images/secure.png" width="244"></kbd> <sup>**_(Chrome)_**</sup>
 
-Unsichere Quellen erkennt man wie folgt (*Variante 2*):
+Unsichere Aufrufe erkennt man wie folgt (*Variante 2*):
 
 <kbd><img alt="Sichere Verbindung" src="/images/not-secure.png" width="150"></kbd> <sup>**_(Chrome)_**</sup>
 
