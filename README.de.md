@@ -237,7 +237,7 @@ Standarmäßig ist das Indexing der Dateien aktviert. Damit ist es möglich durc
 
 #### 1.5.1 Problem
 
-Ruft man einen Ordner der Webprojektes auf, so versucht der Webserver eine der angegebenen Index-Dateien zu finden und aufzurufen. Standardmäßig sind dies die Dateien:
+Ruft man im Webprojekte direkt einen Ordner ohne Angabe einer Datei auf, so versucht der Webserver eine der angegebenen Index-Dateien zu finden und diese aufzurufen. Standardmäßig sind dies die Dateien:
 
 * index.php
 * index.html
@@ -252,7 +252,7 @@ Findet der Webserver keine der angegebenen Dateien bzw. Standard-Index-Dateien, 
 
 <img alt="enabled indexing" src="images/file-indexing-on.png" width="497">
 
-Das Dateilisting sollte, wenn nicht anders gefordert, deaktiviert werden.
+In diesem Fall kann der Angreifer den Inhalt dieses Ordners einsehen und seine Angriffe entsprechend anpassen bzw. einfach Zugriff auf versteckte Dateien bekommen. Das Dateilisting sollte, wenn nicht anders gefordert, deaktiviert werden.
 
 #### 1.5.2 Lösung
 
@@ -266,6 +266,10 @@ Das Datei-Listing wird wie nachfolgend angegeben deaktiviert.
 # ----------------------------------------------------------------------
 Options -Indexes
 ```
+
+Wird nun der Ordner ohne genaue Angabe der Datei aufgerufen, so verweigert der Webserver den Zugriff:
+
+<img alt="enabled indexing" src="images/file-indexing-off.png" width="375">
 
 #### 1.5.4 Hinweise
 
