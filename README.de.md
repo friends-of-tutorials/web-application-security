@@ -157,7 +157,7 @@ Nur sichere, verschlüsselte Verbindungen ([HTTPS](https://de.wikipedia.org/wiki
 
 #### 1.4.1 Problem
 
-Unsichere, unverschlüsselte Verbindung können abgehört und verändert werden. Gerade wenn nicht bekannt ist welche Übertragungsmedien verwendet werden (offenes WLAN, etc.) ist es ohne großen Aufwand möglich übertragene Daten abzuhören. Besonders problematisch ist dies bei:
+Unsichere, unverschlüsselte Verbindung können abgehört und verändert werden. Gerade wenn nicht bekannt ist welche Übertragungsmedien beim Aufruf des Webprojektes verwendet werden (offenes WLAN, etc.), ist es ohne großen Aufwand möglich übertragene Daten abzuhören und gegebenenfalls zu verändern. Besonders problematisch ist dies bei:
 
 * Loginformularen (Zugangsdaten)
 * der Übertragung von bedenklichen und bedeutenden Informationen (Zahlungsdaten, etc.)
