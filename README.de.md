@@ -248,11 +248,11 @@ Man kann den Standard mit folgender Konfiguration z.B. in der `.htaccess`-Datei 
 DirectoryIndex index.php index.html otherIndexFile.php otherIndexFile.html
 ```
 
-Findet der Webserver keine der angegebenen Dateien bzw. Standarddateien, so listet dieser den Inhalt des Ordners auf, sofern das Datei-Indexing nicht abgeschalten worden ist:
+Findet der Webserver keine der angegebenen Dateien bzw. Standard-Index-Dateien, so listet der Webserver den Inhalt des Ordners auf, sofern das Datei-Indexing nicht abgeschalten worden ist:
 
 <img alt="enabled indexing" src="images/file-indexing-on.png" width="497">
 
-Das Dateilisting sollte wenn die Umstände es nicht anders erfordern, deaktiviert werden.
+Das Dateilisting sollte, wenn nicht anders gefordert, deaktiviert werden.
 
 #### 1.5.2 Lösung
 
