@@ -273,7 +273,7 @@ Wird nun der Ordner ohne genaue Angabe der Datei aufgerufen, so verweigert der W
 
 #### 1.5.4 Hinweise
 
-In Bearbeitung...
+Damit die Option `Options` und `DirectoryIndex` in der `.htaccess` funktioniert, muss im Webserver die Option `AllowOverride All` gesetzt sein.
 
 ### 1.6 Versteckte Ordner
 
