@@ -250,6 +250,8 @@ DirectoryIndex index.php index.html otherIndexFile.php otherIndexFile.html
 
 Findet der Webserver keine der angegebenen Dateien bzw. Standarddateien, so listet dieser den Inhalt des Ordners auf, sofern das Datei-Indexing nicht abgeschalten worden ist:
 
+<img alt="enabled indexing" src="images/indexing-on.png">
+
 Das Dateilisting sollte wenn die Umstände es nicht anders erfordern, deaktiviert werden.
 
 #### 1.5.2 Lösung
