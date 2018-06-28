@@ -252,7 +252,7 @@ Findet der Webserver keine der angegebenen Dateien bzw. Standard-Index-Dateien, 
 
 <kbd><img alt="enabled indexing" src="images/file-indexing-on.png" width="497"></kbd>
 
-In diesem Fall kann der Angreifer den Inhalt dieses Ordners einsehen und seine Angriffe entsprechend anpassen bzw. einfach Zugriff auf versteckte Dateien bekommen. Das Dateilisting sollte, wenn nicht anders gefordert, deaktiviert werden.
+In diesem Fall kann der Angreifer den Inhalt dieses Ordners einsehen und seine Angriffe entsprechend anpassen bzw. einfach Zugriff auf versteckte Dateien bekommen. Das Dateilisting sollte, wenn nicht anders gefordert, immer deaktiviert werden.
 
 #### 1.5.2 Lösung
 
