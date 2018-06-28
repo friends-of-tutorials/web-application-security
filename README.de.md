@@ -237,7 +237,7 @@ Standarmäßig ist das Indexing der Dateien je nach Webserver-Einstellung aktvie
 
 #### 1.5.1 Problem
 
-Ruft man im Webprojekte direkt einen Ordner ohne Angabe einer Datei auf, so versucht der Webserver eine der angegebenen Index-Dateien zu finden und diese aufzurufen. Standardmäßig sind dies die Dateien:
+Ruft man im Webprojekt direkt einen Ordner ohne Angabe einer Datei auf, so versucht der Webserver eine der angegebenen Index-Dateien zu finden und diese aufzurufen. Standardmäßig sind dies die Dateien:
 
 * index.php
 * index.html
