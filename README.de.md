@@ -233,7 +233,7 @@ Ziel sollte es immer sein, die Adressdarstellung "*Variante 1*" zu erhalten. Zu 
 
 ### 1.5 Auflisten von Ordnerinhalten
 
-Standarmäßig ist das Indexing der Dateien je nach Webserver-Einstellung aktviert. Damit ist es möglich durch Aufruf von Ordnern ohne Angabe von Dateien deren Inhalt aufzulisten und den Inhalt des Ornders einzusehen.
+Standarmäßig ist das Indexing der Dateien je nach Webserver-Einstellung aktviert. Damit ist es möglich durch Aufruf von Ordnern ohne Angabe von Dateien deren Inhalt aufzulisten und den Inhalt des Ordners einzusehen.
 
 #### 1.5.1 Problem
 
