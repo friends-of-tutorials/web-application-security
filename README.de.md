@@ -217,7 +217,7 @@ Es gibt unterschiedliche Zertifizierungstypen und somit Zertifikatstypen:
 * Organisation Validation (OV)
 * Extended Validation (EV)
 
-Google und andere Suchmaschinen bevorzugen bei den Ergebnissen verschlüsselte Verbindungen im Ranking. Browser weisen auf unverschlüsselte Verbindungen hin bzw. lehnen teils unsichere Verbindungen ab, wenn eine Datenübermittlung stattfinden sollte (Formular). Eine erfolgreich eingerichtete Sicherheit zum Projekt allein reicht nicht. Auch eingebundene Quellen und Bibliotheken müssen gesichert eingebunden werden, damit diese im Browser als sicher eingestuft werden. Einen vollständig sicheren Aufruf erkennt man an der Adresszeile (*Variante 1*):
+Google und andere Suchmaschinen bevorzugen bei den Ergebnissen verschlüsselte Verbindungen im Ranking. Browser weisen auf unverschlüsselte Verbindungen hin bzw. lehnen teilweise unsichere Verbindungen ab, wenn eine Datenübermittlung stattfinden sollte (Formular). Eine erfolgreich eingerichtete Sicherheit zum Projekt allein reicht nicht. Auch eingebundene Quellen und Bibliotheken müssen gesichert eingebunden werden, damit diese im Browser als sicher eingestuft werden. Einen vollständig sicheren Aufruf erkennt man an der Adresszeile (*Variante 1*):
 
 <kbd><img alt="Sichere Verbindung" src="/images/secure.png" width="244"></kbd> <sup>**_(Chrome)_**</sup>
 
