@@ -219,15 +219,15 @@ Es gibt unterschiedliche Zertifizierungstypen und somit Zertifikatstypen:
 
 Google und andere Suchmaschinen bevorzugen bei den Ergebnissen verschlüsselte Verbindungen im Ranking. Browser weisen auf unverschlüsselte Verbindungen hin bzw. lehnen teilweise unsichere Verbindungen ab, wenn eine Datenübermittlung ungesichert stattfindet (z.B. ein abgesendetes Formular). Weiterhin wichtig: Eine erfolgreich eingerichtete sichere Übertragung zum Projekt allein reicht nicht. Auch eingebundene Quellen und Bibliotheken müssen gesichert eingebunden werden, damit die Seite im Browser als sicher eingestuft wird. Einen vollständig sicheren Aufruf erkennt man an der Adresszeile (*Variante 1*):
 
-<img alt="Sichere Verbindung" src="/images/secure.png" width="244"> <sup>**_(Chrome)_**</sup>
+<kbd><img alt="Sichere Verbindung" src="/images/secure.png" width="244"></kbd> <sup>**_(Chrome)_**</sup>
 
 Unsichere Aufrufe erkennt man wie folgt (*Variante 2*):
 
-<img alt="Sichere Verbindung" src="/images/not-secure.png" width="150"> <sup>**_(Chrome)_**</sup>
+<kbd><img alt="Sichere Verbindung" src="/images/not-secure.png" width="150"></kbd> <sup>**_(Chrome)_**</sup>
 
 Sichere Aufrufe, jedoch unsicher eingebundene Quellen erkennt man wie folgt (*Variante 3*):
 
-<img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107"> <sup>**_(Chrome)_**</sup>
+<kbd><img alt="Sichere Verbindung" src="/images/secure-mixed-not-secure.png" width="107"></kbd> <sup>**_(Chrome)_**</sup>
 
 Ziel sollte es immer sein, die Adressdarstellung "*Variante 1*" zu erhalten. Zu erkennen an der grünen Adresszeile.
 
@@ -250,7 +250,7 @@ DirectoryIndex index.php index.html otherIndexFile.php otherIndexFile.html
 
 Findet der Webserver keine der angegebenen Dateien bzw. Standard-Index-Dateien, so listet der Webserver den Inhalt des Ordners auf, sofern das Datei-Indexing nicht abgeschalten worden ist:
 
-<img alt="enabled indexing" src="images/file-indexing-on.png" width="497">
+<kbd><img alt="enabled indexing" src="images/file-indexing-on.png" width="497"></kbd>
 
 In diesem Fall kann der Angreifer den Inhalt dieses Ordners einsehen und seine Angriffe entsprechend anpassen bzw. einfach Zugriff auf versteckte Dateien bekommen. Das Dateilisting sollte, wenn nicht anders gefordert, immer deaktiviert werden.
 
@@ -269,7 +269,7 @@ Options -Indexes
 
 Wird nun der Ordner ohne genaue Angabe der Datei aufgerufen, so verweigert der Webserver den Zugriff:
 
-<img alt="enabled indexing" src="images/file-indexing-off.png" width="375">
+<kbd><img alt="enabled indexing" src="images/file-indexing-off.png" width="375"></kbd>
 
 #### 1.5.4 Hinweise
 
