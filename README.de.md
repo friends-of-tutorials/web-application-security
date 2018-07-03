@@ -37,7 +37,7 @@ Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkenne
 
 Mit Hilfe der nun zur Verfügung stehenden Variablen `content-type-default`, `content-type-assets` und `content-type-typo3` können dann in den nachfolgenden Beispielen entsprechend die Header gesetzt werden.
 
-Eine Alternative, jedoch etwas komplexer, ist auch die Abfrage mit Hilfe der `RewriteRule`/`RewriteCond` "Technik" möglich:
+Eine Alternative für die Inhaltserkennung, jedoch etwas komplexer in der Notation, ist auch die Abfrage mit Hilfe der `RewriteRule`/`RewriteCond` "Technik" möglich:
 
 ```bash
 <IfModule mod_headers.c>
