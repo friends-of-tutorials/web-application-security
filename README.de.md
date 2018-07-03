@@ -21,12 +21,14 @@ Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkenne
 # | Content detection                                                  |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-    # detect the content type (default=other, assets - images, video, etc., typo3 backend)
+    # avoid double detection (only one is used below - even if more then one
+    # conditions applies)
     SetEnvIfNoCase REQUEST_URI "^" content-type=default
-    SetEnvIfNoCase REQUEST_URI "\.(appcache|atom|bbaw|bmp|br|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|gz|htc|ic[os]|jpe?g|m?js|json(ld)?|m4[av]|manifest|map|markdown|md|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|wasm|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$" content-type=assets
+    SetEnvIfNoCase REQUEST_URI "\.(png|jpg|jpeg|gif|css|js)$" content-type=assets
     SetEnvIfNoCase REQUEST_URI "^/(typo3/)" content-type=typo3
 
-    # translate the detected type into an unambiguous variable (because it is not possible to check a given variable value with env parameter)
+    # set single (boolean) variable from content-type (can be used everywhere: 
+    # content-type-default, content-type-assets, content-type-api
     SetEnvIf content-type "^default$" content-type-default
     SetEnvIf content-type "^assets$"  content-type-assets
     SetEnvIf content-type "^typo3$"   content-type-typo3
@@ -34,6 +36,31 @@ Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkenne
 ```
 
 Mit Hilfe der nun zur Verfügung stehenden Variablen `content-type-default`, `content-type-assets` und `content-type-typo3` können dann in den nachfolgenden Beispielen entsprechend die Header gesetzt werden.
+
+Eine Alternative, jedoch etwas komplexer, ist auch die Abfrage mit Hilfe der `RewriteRule`/`RewriteCond` "Technik" möglich:
+
+```bash
+<IfModule mod_headers.c>
+    # avoid double detection (only one is used below - even if more then one
+    # conditions applies)
+    RewriteRule .* - [ENV=content-type:default]
+    RewriteCond %{REQUEST_URI} "\.(png|jpg|jpeg|gif|css|js)$"
+    RewriteRule .* - [ENV=content-type:assets]
+    RewriteCond %{THE_REQUEST} "/v1/.*"
+    RewriteRule .* - [ENV=content-type:api]
+
+    # set single (boolean) variable from content-type (can be used everywhere: 
+    # content-type-default, content-type-assets, content-type-api
+    RewriteCond %{ENV:content-type} default
+    RewriteRule .* - [ENV=content-type-default:true]
+    RewriteCond %{ENV:content-type} assets
+    RewriteRule .* - [ENV=content-type-assets:true]
+    RewriteCond %{ENV:content-type} api
+    RewriteRule .* - [ENV=content-type-api:true]
+</IfModule>
+```
+
+Der Vorteil liegt nun hierbei, dass man auch neben den Zugriff auf Standard-Servervariablen auch den Zugriff auf "besondere" (specials) Variablen wie `THE_REQUEST` erhält.
 
 #### 1.1.3 PHP
 
