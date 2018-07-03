@@ -60,7 +60,7 @@ Eine Alternative, jedoch etwas komplexer, ist auch die Abfrage mit Hilfe der `Re
 </IfModule>
 ```
 
-Der Vorteil liegt nun hierbei, dass man auch neben den Zugriff auf Standard-Servervariablen auch den Zugriff auf "besondere" (specials) Variablen wie `THE_REQUEST` erhält.
+Der Vorteil liegt nun hierbei, dass man neben den Zugriff auf Standard-Servervariablen wie `REQUEST_URI` auch den Zugriff auf "besondere" Variablen (specials) wie `THE_REQUEST` erhält.
 
 #### 1.1.3 PHP
 
