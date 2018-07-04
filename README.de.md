@@ -422,7 +422,7 @@ Für das Projekt selbst "wertlose" Informationen, welche nicht für die eigentli
 
 #### 1.8.2 Lösung
 
-Die oben genannten Informationsorder und Informationsdateien können von der Auslieferung ausgeschlossen werden. Hierzu ist es beim versuchten Zugriff auf diese Quellen möglich ein "404 - Not Found" Status-Code zu simulieren.
+Die oben genannten Informationsorder und Informationsdateien können von der Auslieferung ausgeschlossen werden. Hierzu ist es beim versuchten Zugriff auf diese Quellen möglich ein "404 - Not Found" HTTP-Status-Code zu simulieren.
 
 #### 1.8.3 Beispiel via `.htaccess`
 
@@ -437,7 +437,7 @@ Die oben genannten Informationsorder und Informationsdateien können von der Aus
 
 #### 1.8.4 Hinweise
 
-In Bearbeitung...
+Für das Einstellen des "404 - Not Found" HTTP-Status-Code sind derzeit keine Hinweise vorhanden.
 
 ### 1.9 Referrer Policy
 
