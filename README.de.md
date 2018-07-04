@@ -414,7 +414,7 @@ In Bearbeitung...
 
 ### 1.8 Versteckte Ordner
 
-Ähnlich wie die besonders zu schützenden Ordner und Dateien (nicht öffentliche Bereiche), gibt es Ordner und Dateien, welche generell nicht erreichbar sein sollen. Das können "Hilfsdateien" oder Konfigurationsordner sein, welche zum Betrieb des Projektes z.B. über die Konsole dienen (.git, .svn, .hg, etc.). Diese Bereiche sollten komplett von der Auslieferung über den Webserver ausgeschlossen werden.
+Ähnlich wie die besonders zu schützenden Ordner und Dateien (nicht öffentliche Bereiche), gibt es Ordner und Dateien, welche generell nicht erreichbar sein sollen. Das können z.B. "Hilfsdateien" oder Konfigurationsordner sein, welche zum Betrieb des Projektes über die Konsole dienen (.git, .svn, .hg, etc.). Sofern diese nicht für das Webprojekt benötigt werden, sollten diese Bereiche komplett von der Auslieferung über den Webserver ausgeschlossen werden.
 
 #### 1.8.1 Problem
 
