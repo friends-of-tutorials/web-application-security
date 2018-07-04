@@ -439,6 +439,36 @@ user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username pass
 
 In Bearbeitung...
 
+### 1.9 Referrer Policy
+
+In Bearbeitung...
+
+#### 1.9.1 Problem
+
+In Bearbeitung...
+
+#### 1.9.2 Lösung
+
+Eine mögliche zusätzliche Absicherung kann der schon erwähnte **Verzeichnisschutz** sein. Weitere Möglichkeiten sind:
+
+* Ausschließen der Auslieferung über den Webserver (HTTP-Statuscode 404)
+* Auslieferung der Bereiche nur über bestimmte Erkennungsmerkmale (speziell angepasster User-Agent, etc.)
+
+#### 1.9.3 Beispiel via `.htaccess`
+
+```bash
+# ----------------------------------------------------------------------
+# | Referrer Policy (RP)                                               |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Referrer-Policy: no-referrer-when-downgrade
+</IfModule>
+```
+
+#### 1.9.4 Hinweise
+
+In Bearbeitung...
+
 ### 1.10 Anderes
 
 * X-Powered-By
