@@ -490,6 +490,7 @@ In Bearbeitung...
 * [.htaccess boilerplate (apache)](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess)
 * [Header mit TYPO3](https://jweiland.net/index.php?id=1165&L=1)
 * [.htaccess Beispiele](https://www.askapache.com/htaccess/htaccess-fresh/)
+* [Referrer Policy](https://scotthelme.co.uk/a-new-security-header-referrer-policy/)
 
 ## C. Tools
 
