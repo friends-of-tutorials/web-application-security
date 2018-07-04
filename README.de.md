@@ -414,15 +414,15 @@ In Bearbeitung...
 
 ### 1.8 Versteckte Ordner
 
-In Bearbeitung... (.git, etc.)
+Ähnlich wie die besonders zu schützenden Ordner und Dateien (nicht öffentliche Bereiche), gibt es Ordner und Dateien, welche generell nicht erreichbar sein sollen. Das können "Hilfsdateien" oder Konfigurationsordner sein, welche zum Betrieb des Projektes z.B. über die Konsole dienen (.git, .svn, .hg, etc.). Diese Bereiche sollten komplett von der Auslieferung über den Webserver ausgeschlossen werden.
 
 #### 1.8.1 Problem
 
-In Bearbeitung...
+Für das Projekt selbst "wertlose" Informationen, welche nicht für die eigentliche Auslieferung des Projektes benötigt werden, sind öffentlich erreichbar. Solche Informationen sollten nicht erreichbar sein. Über die o.g. Konfigurationsdateien könnten z.B. Informationen zum Projekt eingesehen werden, welche einem Angreifer helfen Angriffspunkte zu finden.
 
 #### 1.8.2 Lösung
 
-In Bearbeitung...
+Die oben genannten Informationsorder und Informationsdateien sollten von der Auslieferung ausgeschlossen werden. Hierzu ist es beim versuchten Zugriff auf diese Quellen ein "404 - Not Found" Status-Code zu simulieren.
 
 #### 1.8.3 Beispiel via `.htaccess`
 
