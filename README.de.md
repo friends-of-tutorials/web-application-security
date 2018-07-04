@@ -418,11 +418,11 @@ In Bearbeitung...
 
 #### 1.8.1 Problem
 
-Für das Projekt selbst "wertlose" Informationen, welche nicht für die eigentliche Auslieferung des Projektes benötigt werden, sind öffentlich erreichbar. Solche Informationen sollten nicht erreichbar sein. Über die o.g. Konfigurationsdateien könnten z.B. Informationen zum Projekt eingesehen werden, welche einem Angreifer helfen Angriffspunkte zu finden.
+Für das Projekt selbst "wertlose" Informationen, welche nicht für die eigentliche Auslieferung des Projektes benötigt werden, sind öffentlich erreichbar. Diese Informationen und vor allem die, die einem Angreifer helfen Angriffspunkte zu finden, sollten nicht erreichbar sein.
 
 #### 1.8.2 Lösung
 
-Die oben genannten Informationsorder und Informationsdateien sollten von der Auslieferung ausgeschlossen werden. Hierzu ist es beim versuchten Zugriff auf diese Quellen ein "404 - Not Found" Status-Code zu simulieren.
+Die oben genannten Informationsorder und Informationsdateien sollten von der Auslieferung ausgeschlossen werden. Hierzu ist es beim versuchten Zugriff auf diese Quellen möglich ein "404 - Not Found" Status-Code zu simulieren.
 
 #### 1.8.3 Beispiel via `.htaccess`
 
