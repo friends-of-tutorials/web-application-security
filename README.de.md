@@ -466,12 +466,33 @@ In Bearbeitung...
 
 In Bearbeitung...
 
-### 1.10 Anderes
+### 1.10 Content sniffing
+
+In Bearbeitung...
+
+#### 1.10.1 Problem
+
+In Bearbeitung...
+
+#### 1.10.2 Lösung
+
+In Bearbeitung...
+
+#### 1.10.3 Beispiel via `.htaccess`
+
+```bash
+# ----------------------------------------------------------------------
+# | Content sniffing                                                   |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header append X-Content-Type-Options "nosniff"
+</IfModule>
+```
+
+### 1.11 Anderes
 
 * X-Powered-By
 * ServerSignature
-* Header append X-Content-Type-Options "nosniff"
-* Header edit Set-Cookie ^(.*)$ $1;Secure env=is_live
 
 ## A. Weitere Anleitungen
 
