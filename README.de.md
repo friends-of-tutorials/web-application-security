@@ -302,7 +302,7 @@ Wird nun der Ordner ohne genaue Angabe der Datei aufgerufen, so verweigert der W
 
 Damit die Option `Options` und `DirectoryIndex` in der `.htaccess` funktioniert, muss im Webserver die Option `AllowOverride All` gesetzt sein.
 
-### 1.6 Versteckte Ordner
+### 1.6 Sichere Cookies
 
 In Bearbeitung... (.git, etc.)
 
@@ -318,33 +318,6 @@ In Bearbeitung...
 
 ```bash
 # ----------------------------------------------------------------------
-# | Block access to vcs directories (Git, SVN, Mercurial               |
-# ----------------------------------------------------------------------
-<IfModule mod_alias.c>
-    RedirectMatch 404 /\.(?:git|svn|hg)/
-</IfModule>
-```
-
-#### 1.6.4 Hinweise
-
-In Bearbeitung...
-
-### 1.7 Sichere Cookies
-
-In Bearbeitung... (.git, etc.)
-
-#### 1.7.1 Problem
-
-In Bearbeitung...
-
-#### 1.7.2 Lösung
-
-In Bearbeitung...
-
-#### 1.7.3 Beispiel via `.htaccess`
-
-```bash
-# ----------------------------------------------------------------------
 # | Secure Cookies                              |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
@@ -353,15 +326,15 @@ In Bearbeitung...
 </IfModule>
 ```
 
-#### 1.7.4 Hinweise
+#### 1.6.4 Hinweise
 
 In Bearbeitung...
 
-### 1.8 Besonders zu schützende Ordner und Dateien (nicht öffentliche Bereiche)
+### 1.7 Besonders zu schützende Ordner und Dateien (nicht öffentliche Bereiche)
 
 Es gibt Bereiche auf der Webseite (z.B. das Backend, Infodateien, etc.), welche nicht für die Öffentlichkeit bestimmt sind. Diese sollten auch nicht öffentlich erreichbar sein und vor unberechtigtem Zugriff geschützt werden.
 
-#### 1.8.1 Problem
+#### 1.7.1 Problem
 
 Besonders zu schützende und nicht der Öffentlichkeit vorgehaltene Bereiche sollten einen erweiterten Schutz erhalten. Dies kann z.B. ein zusätzlicher Verzeichnisschutz sein und erschwert z.B. Angreifern das Ausspionieren von wichtigen Informationen oder Angriffe auf bekannte Sicherheitslücken. Besonders zu schützende Bereiche sind z.B.:
 
@@ -382,22 +355,22 @@ Disallow: /typo3/
 Disallow: /print/
 ```
 
-#### 1.8.2 Lösung
+#### 1.7.2 Lösung
 
 Eine mögliche zusätzliche Absicherung kann der schon erwähnte **Verzeichnisschutz** sein. Weitere Möglichkeiten sind:
 
 * Ausschließen der Auslieferung über den Webserver (HTTP-Statuscode 404)
 * Auslieferung der Bereiche nur über bestimmte Erkennungsmerkmale (speziell angepasster User-Agent, etc.)
 
-#### 1.8.3 Beispiel via `.htaccess`
+#### 1.7.3 Beispiel via `.htaccess`
 
-##### 1.8.3.1 Create a `.htpasswd` file:
+##### 1.7.3.1 Create a `.htpasswd` file:
 
 ```bash
 user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username password
 ```
 
-##### 1.8.3.2 The `.htaccess` file
+##### 1.7.3.2 The `.htaccess` file
 
 ```bash
 # ----------------------------------------------------------------------
@@ -433,6 +406,33 @@ user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username pass
     RedirectMatch 404 /log
     RedirectMatch 404 /revision-infos
 </If>
+```
+
+#### 1.7.4 Hinweise
+
+In Bearbeitung...
+
+### 1.8 Versteckte Ordner
+
+In Bearbeitung... (.git, etc.)
+
+#### 1.8.1 Problem
+
+In Bearbeitung...
+
+#### 1.8.2 Lösung
+
+In Bearbeitung...
+
+#### 1.8.3 Beispiel via `.htaccess`
+
+```bash
+# ----------------------------------------------------------------------
+# | Block access to vcs directories (Git, SVN, Mercurial               |
+# ----------------------------------------------------------------------
+<IfModule mod_alias.c>
+    RedirectMatch 404 /\.(?:git|svn|hg)/
+</IfModule>
 ```
 
 #### 1.8.4 Hinweise
@@ -488,6 +488,10 @@ In Bearbeitung...
     Header append X-Content-Type-Options "nosniff"
 </IfModule>
 ```
+
+#### 1.10.4 Hinweise
+
+In Bearbeitung...
 
 ### 1.11 Anderes
 
