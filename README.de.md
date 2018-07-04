@@ -449,10 +449,7 @@ In Bearbeitung...
 
 #### 1.9.2 Lösung
 
-Eine mögliche zusätzliche Absicherung kann der schon erwähnte **Verzeichnisschutz** sein. Weitere Möglichkeiten sind:
-
-* Ausschließen der Auslieferung über den Webserver (HTTP-Statuscode 404)
-* Auslieferung der Bereiche nur über bestimmte Erkennungsmerkmale (speziell angepasster User-Agent, etc.)
+In Bearbeitung...
 
 #### 1.9.3 Beispiel via `.htaccess`
 
