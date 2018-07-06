@@ -4,7 +4,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## 1. Sicherheitskonzepte via HTTP-Header Ausspielungen
 
-Headereinstellungen können je nach verwendetem Webserver mittels seiner Webservereinstellungen, seiner in den Webprojekten vorhandenen Konfigurationsdateien z.B. der `.htaccess`-Datei (NCSA kompatible Webserver<sup>1</sup>) oder direkt in seiner ausgelieferten Webanwendungen selbst gesetzt werden (z.B. mittels einer Scriptsprache wie PHP, Ruby, Python, etc.). 
+Headereinstellungen können je nach verwendetem Webserver mittels seiner Webservereinstellungen, seiner in den Webprojekten vorhandenen Konfigurationsdateien z.B. der `.htaccess`-Datei (NCSA kompatible Webserver<sup>1</sup>) oder direkt in in den Script-Sprachen seiner ausgelieferten Webanwendungen selbst gesetzt werden (z.B. mittels einer Scriptsprache wie PHP, Ruby, Python, etc.). 
 
 ### 1.1 Vorbetrachtungen
 
@@ -14,7 +14,7 @@ In Bearbeitung...
 
 #### 1.1.2 `.htaccess`
 
-Nachfolgend `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird in diesem Beispiel der Aufruf des Backends TYPO3 (`/typo3/`), der Aufruf von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
+Nachfolgend aufgeführt sind die `.htaccess` Einstellungen, um verschiedene Inhaltsaufrufe zu erkennen. Erkannt wird in dem nachfolgendem Beispiel der Aufruf des Backends TYPO3 (`/typo3/`), der Aufruf von Web-Assets (Bilder, etc.) und der Rest (alles außer TYPO3 und Web-Assets):
 
 ```bash
 # ----------------------------------------------------------------------
@@ -60,7 +60,7 @@ Eine Alternative für die Inhaltserkennung, jedoch etwas komplexer in der Notati
 </IfModule>
 ```
 
-Der Vorteil liegt nun hierbei, dass man neben den Zugriff auf Standard-Servervariablen wie `REQUEST_URI` auch den Zugriff auf "besondere" Variablen (specials) wie `THE_REQUEST` erhält. Der Zugriff z.B. auf `THE_REQUEST` ist mittels `SetEnvIfNoCase` bzw. `SetEnvIf` nicht möglich.
+Der Vorteil liegt nun in der zuletzt genannten Version, dass man neben dem Zugriff auf Standard-Servervariablen wie `REQUEST_URI` auch den Zugriff auf "besondere" Variablen (specials) wie `THE_REQUEST` erhält. Der Zugriff z.B. auf `THE_REQUEST` ist mittels `SetEnvIfNoCase` bzw. `SetEnvIf` nicht möglich.
 
 #### 1.1.3 PHP
 
@@ -88,7 +88,7 @@ Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session
   * Einbinden fremder Quellen in das Webprojekt (z.B. über die Paketverwaltung: npm, composer, etc.)
   * etc.
 
-Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden. Generell ist es immer eine gute Idee alle möglichen Importe zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Varianten zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
+Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden (um z.B. wichtige Daten zu entwenden). Generell ist es immer eine gute Idee alle möglichen Importe zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Varianten zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
 
 * Inline-Scripting generell verbieten und in externe Dateien in vertrauenswürdige Quellen auslagern, weil die Unterscheidung von eigenem (gutartigem) Code zu schadhaften Code beim Inline-Scripting besonders schwierig ist
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
@@ -96,11 +96,11 @@ Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, 
 
 #### 1.2.2 Lösung (Content Security Policy)
 
-Ein weiterer Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Script-Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Die gewünschten Regeln werden über die [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> ausgespielt.
+Ein Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Script-Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Die gewünschten Regeln werden über die [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> ausgespielt.
 
 #### 1.2.3 Beispiel via `.htaccess`
 
-Im nachfolgenden Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`). Ältere Browser, welche den CSP Header nicht unterstützen, unterstützen unter Umständen eine ähnliche Technik [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection), welche Cross-Site-Scripting Filter aktivieren:
+Im nachfolgendem Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`). Ältere Browser, welche den CSP Header nicht unterstützen, unterstützen unter Umständen eine ähnliche Technik [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection), welche Cross-Site-Scripting Filter aktivieren:
 
 ```bash
 # ----------------------------------------------------------------------
