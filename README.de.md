@@ -4,7 +4,7 @@ Eine Anleitung um Web-Anwendungen abzusichern.
 
 ## 1. Sicherheitskonzepte via HTTP-Header Ausspielungen
 
-Headereinstellungen können je nach verwendetem Webserver mittels seiner Webservereinstellungen, seiner Konfigurationsdateien z.B. der `.htaccess`-Datei (NCSA kompatible Webserver<sup>1</sup>) oder direkt in seiner ausgelieferten Webanwendungen selbst gesetzt werden (z.B. mittels einer Scriptsprache wie PHP, Ruby, Python, etc.). 
+Headereinstellungen können je nach verwendetem Webserver mittels seiner Webservereinstellungen, seiner in den Webprojekten vorhandenen Konfigurationsdateien z.B. der `.htaccess`-Datei (NCSA kompatible Webserver<sup>1</sup>) oder direkt in seiner ausgelieferten Webanwendungen selbst gesetzt werden (z.B. mittels einer Scriptsprache wie PHP, Ruby, Python, etc.). 
 
 ### 1.1 Vorbetrachtungen
 
