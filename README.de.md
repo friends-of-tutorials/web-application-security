@@ -60,7 +60,7 @@ Eine Alternative für die Inhaltserkennung, jedoch etwas komplexer in der Notati
 </IfModule>
 ```
 
-Der Vorteil liegt nun in der zuletzt genannten Version, dass man neben dem Zugriff auf Standard-Servervariablen wie `REQUEST_URI` auch den Zugriff auf "besondere" Variablen (specials) wie `THE_REQUEST` erhält. Der Zugriff z.B. auf `THE_REQUEST` ist mittels `SetEnvIfNoCase` bzw. `SetEnvIf` nicht möglich.
+Der Vorteil in der zuletzt genannten Version liegt darin, dass man neben dem Zugriff auf Standard-Servervariablen wie `REQUEST_URI` auch den Zugriff auf "besondere" Variablen (specials) wie `THE_REQUEST` erhält. Der Zugriff z.B. auf `THE_REQUEST` ist mittels `SetEnvIfNoCase` bzw. `SetEnvIf` nicht möglich.
 
 #### 1.1.3 PHP
 
