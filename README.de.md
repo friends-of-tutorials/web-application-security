@@ -448,15 +448,15 @@ Für das Einstellen des "404 - Not Found" HTTP-Status-Code sind derzeit keine Hi
 
 ### 1.9 Referrer Policy
 
-Bei jedem Aufruf (vor allem beim Aufruf von externen Seiten) wird die Quelle der aktuellen Seite an die neu aufgerufene Seite übertragen (Referrer). Dieser sogenannte Referrer bezeichnet im World Wide Web die Webseite, über die der Benutzer zur aktuellen Webseite bzw. Datei gekommen ist. Die Übertragung ist manchmal gewünscht, um z.B. Statistiken des Aufrufs zu führen bzw. Einschränkungen des Aufrufes zu prüfen. In anderen Fällen ist dies nicht wirklich notwendig. "Zusätzliche" Informationen sollten nur übertragen werden, wenn diese auch wirklich benötigt werden (Stichwort Datenschutz). In allen anderen Fällen kann diese Informationsübertragung verhindert werden. Vor allem bei unverschlüsselten Übertragungen sollten unnötige Informationen weitestgehend eingeschränkt werden, damit Angreifer diese nicht lesen und abfangen können. Nachfolgend wird erläutert, wie die Referrer-Übertragung eingeschränkt werden kann (z.B. nur bei verschlüsselten Übertragungen).
+Bei jedem Aufruf (vor allem beim Aufruf von externen Seiten) wird die Quelle der aktuellen Seite an die neu aufgerufene Seite übertragen (Referrer). Dieser sogenannte Referrer bezeichnet im World Wide Web die Webseite, über die der Benutzer zur aktuellen Webseite bzw. Datei gekommen ist. Die Übertragung ist manchmal gewünscht, um z.B. Statistiken des Aufrufs zu führen bzw. Einschränkungen des Aufrufes zu prüfen. In anderen Fällen ist dies nicht wirklich notwendig. "Zusätzliche" Informationen sollten nur übertragen werden, wenn diese auch wirklich benötigt werden (Stichwort Datenschutz). In solchen Fällen kann diese Informationsübertragung verhindert werden. Vor allem bei unverschlüsselten Übertragungen sollten unnötige Informationen weitestgehend eingeschränkt werden, damit Angreifer diese nicht lesen und abfangen können. Nachfolgend wird erläutert, wie die Referrer-Übertragung eingeschränkt werden kann (z.B. nur bei verschlüsselten Übertragungen).
 
 #### 1.9.1 Problem
 
-In Bearbeitung...
+Unnötige Referrer-Informationen werden an externe Seiten übertragen, obwohl dies nicht notwenig ist.
 
 #### 1.9.2 Lösung
 
-In Bearbeitung...
+Mit Hilfe des Headers `Referrer-Policy` kann man die Übertragung einschränken. Zu den möglichen Optionen, siehe auch [Referrer-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy).
 
 #### 1.9.3 Beispiel via `.htaccess`
 
