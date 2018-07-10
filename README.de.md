@@ -215,9 +215,16 @@ RewriteCond %{REQUEST_URI} !^/.well-known
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # ----------------------------------------------------------------------
-# | redirect http to https (ignore /.well-known)                       |
+# | redirect http to https I (ignore /.well-known)                      |
 # ----------------------------------------------------------------------
 RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/.well-known
+RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
+
+# ----------------------------------------------------------------------
+# | redirect http to https II (ignore /.well-known)                    |
+# ----------------------------------------------------------------------
+RewriteCond %{SERVER_PORT} !^443$
 RewriteCond %{REQUEST_URI} !^/.well-known
 RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=301,L]
 
