@@ -126,7 +126,7 @@ Ziel jeder Webentwicklung sollte es immer sein ohne Inline-Scripting und einer �
 
 Generell empfehle ich jedem während der Webentwicklung sich tiefer mit dem Thema [Content Security Policy](https://content-security-policy.com/) zu beschäftigen. Neben dem Scripting können hierüber hinaus auch andere Datenquellen eingeschränkt und abgeschottet werden:
 
-* Gültiger Standard (`default-src`)
+* Gültiger Standard - Alle nachfolgenden Quellen (`default-src`)
 * Gültige Quellen für XMLHttpRequest (AJAX), WebSocket und EventSources-Verbindungen (`connect-src`)
 * Gültige Quellen für Stylesheets (`style-src`)
 * Gültige Bild-Quellen (`img-src`)
@@ -290,7 +290,7 @@ In diesem Fall kann der Angreifer den Inhalt dieses Ordners einsehen und seine A
 
 #### 1.5.2 Lösung
 
-Das Datei-Listing wird wie nachfolgend angegeben deaktiviert.
+Das Datei-Listing wird wie im nachfolgendem Beispiel angegeben deaktiviert.
 
 #### 1.5.3 Beispiel via `.htaccess`
 
@@ -448,7 +448,7 @@ Für das Einstellen des "404 - Not Found" HTTP-Status-Code sind derzeit keine Hi
 
 ### 1.9 Referrer Policy
 
-In Bearbeitung...
+Bei jedem Aufruf (vor allem beim Aufruf von externen Seiten) wird die Quelle der aktuellen Seite an die neu aufgerufene Seite übertragen (Referrer). Dieser sogenannte Referrer bezeichnet im World Wide Web die Webseite, über die der Benutzer zur aktuellen Webseite bzw. Datei gekommen ist. Die Übertragung ist manchmal gewünscht, um z.B. Statistiken des Aufrufs zu führen bzw. Einschränkungen des Aufrufes zu prüfen. In anderen Fällen ist dies nicht wirklich notwendig. "Zusätzliche" Informationen sollten nur übertragen werden, wenn diese auch wirklich benötigt werden (Stichwort Datenschutz). In allen anderen Fällen kann diese Informationsübertragung verhindert werden. Vor allem bei unverschlüsselten Übertragungen sollten unnötige Informationen weitestgehend eingeschränkt werden, damit Angreifer diese nicht lesen und abfangen können. Nachfolgend wird erläutert, wie die Referrer-Übertragung eingeschränkt werden kann (z.B. nur bei verschlüsselten Übertragungen).
 
 #### 1.9.1 Problem
 
