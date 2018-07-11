@@ -1,6 +1,12 @@
 # Sicherheit von Webanwendungen
 
-Eine Anleitung um Web-Anwendungen abzusichern.
+Eine Anleitung um Web-Anwendungen abzusichern. In erster Linie um Daten zu schützen:
+
+* Ausspionieren von Daten und Datenklau (z.B. Entwenden von Logindaten)
+
+Ferner um Systeme zu schützen:
+
+* Überlastungsversuche, etc.
 
 ## 1. Sicherheitskonzepte via HTTP-Header Ausspielungen
 
@@ -527,12 +533,32 @@ In Bearbeitung...
 
 In Bearbeitung...
 
-### 1.11 Anderes
+### 1.11 DDoS
+
+In Bearbeitung...
+
+#### 1.10.1 Problem
+
+In Bearbeitung...
+
+#### 1.10.2 Lösung
+
+In Bearbeitung...
+
+#### 1.10.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.11.4 Hinweise
+
+In Bearbeitung...
+
+### 1.20 Anderes
 
 * X-Powered-By
 * ServerSignature
 
-#### 1.11.1 Beispiel via `.htaccess`
+#### 1.20.1 Beispiel via `.htaccess`
 
 ```bash
 # other security header
