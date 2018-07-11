@@ -98,7 +98,9 @@ Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, 
 
 Ein Lösungsansatz neben dem Filtern der importierten Dateien ist die Einschränkung der Script-Ausführungsebenen. Hierfür bieten die Browser den [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy)<sup>Wiki</sup>-Ansatz. Die gewünschten Regeln werden über die [HTTP-Header](https://de.wikipedia.org/wiki/Liste_der_HTTP-Headerfelder)<sup>Wiki</sup> ausgespielt.
 
-#### 1.2.3 Beispiel via `.htaccess`
+#### 1.2.3 Beispiele
+
+##### 1.2.3.1 Beispiel via `.htaccess`
 
 Im nachfolgendem Beispiel wird als Standard für das Projekt das Inline-Scripting verboten, die vertrauenswürdigen Script-Quellen auf die eigene Seite und die Domain https://code.jquery.com beschränkt. Für Assets (siehe Vorbetrachtung) werden keine weiteren Header und somit Einschränkungen gesetzt und sind hier deshalb nicht aufgeführt. Sollte ein bestimmter Bereich (z.B. das Backend wie TYPO3) mit bestimmten Einschränkungen nicht mehr funktionieren (z.B. Inline-Script), so muss dieser Bereich angepasst werden (`content-type-typo3`). Ältere Browser, welche den CSP Header nicht unterstützen, unterstützen unter Umständen eine ähnliche Technik [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection), welche Cross-Site-Scripting Filter aktivieren:
 
@@ -118,6 +120,20 @@ Im nachfolgendem Beispiel wird als Standard für das Projekt das Inline-Scriptin
     Header set X-XSS-Protection "1; mode=block" env=content-type-default
     Header set X-XSS-Protection "1; mode=block" env=content-type-typo3
 </IfModule>
+```
+
+##### 1.2.3.2 Beispiel via Meta-Tag
+
+Die gewünschten Einschränkungen können ebenfalls via Meta-Tag angegeben werden:
+
+```html
+<!doctype html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-WebKit-CSP" content="default-src 'self'; script-src 'self'">
+  <title>page that wants to use CSP</title>
+</head>
 ```
 
 #### 1.2.4 Hinweise
@@ -148,9 +164,20 @@ Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vert
 
 <img alt="Blockierte Scriptausführungen" src="/images/console.log.1.png" width="584">
 
-### 1.3 Clickjacking
+Ältere Browser nutzen unter Umständen nicht die browserübergreifende Option `Content-Security-Policy`, sondern nutzen einen browsereigenen "Standard":
+
+* X-Content-Security-Policy
+* X-Webkit-CSP
+
+Diese sind "veraltet" (deprecated). Es ist durchaus dennoch eine gute Idee diese parallel mit zu integrieren. Sie auch: [content-security-policy.com](https://content-security-policy.com/)
+
+### 1.3 Clickjacking & Cross-Site-Request-Forgery (CSRF) mittels Inlineframes
+
+Ziel beider Varianten ist das Unterschieben manipulierter URLs bzw. das Einbetten der eigenen Seite innerhalb einer anderen, um ungewünschte Aktionen zu provozieren.
 
 Durch [Clickjacking](https://de.wikipedia.org/wiki/Clickjacking)<sup>Wiki</sup> ist es dem Angreifer möglich Clicks und Tastatureingaben für den Benutzer unbemerkt auf der eingebundenen Seite auszuführen bzw. diese Usereingaben abzufangen.
+
+Beim sogenannten [CSRF](https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery) wird bei der Inlineframe-Variante eine manipulierte URL aufgerufen, welche im ungünstigsten Fall eine ungewollte Aktion durchführt. Als Beispiel sei ein eingeloggter Administrator erwähnt, dem der Aufruf einer Benutzererstellen-Seite untergeschoben wird.
 
 #### 1.3.1 Problem
 
@@ -504,6 +531,31 @@ In Bearbeitung...
 
 * X-Powered-By
 * ServerSignature
+
+#### 1.11.1 Beispiel via `.htaccess`
+
+```bash
+Header unset X-Powered-By
+
+
+AddDefaultCharset UTF-8
+AddLanguage de-DE .html .htm .css .js
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+SetEnv TZ Europe/Berlin
+
+# Only allow JavaScript from the same domain to be run.
+# Don not allow inline JavaScript to run.
+Header set X-Content-Security-Policy "allow 'self';"
+# Prevent mime based attacks
+Header set X-Content-Type-Options "nosniff"
+# Disable server sign
+ServerSignature Off
+# drop Range header when more than 5 ranges. CVE-2011-3192
+SetEnvIf Range (,.*?){5,} bad-range=1
+RequestHeader unset Range env=bad-range
+# LIMIT UPLOAD FILE SIZE TO PROTECT AGAINST DOS ATTACK. Bytes, 0-2147483647(2GB)
+LimitRequestBody 2147483647
+```
 
 ## A. Weitere Anleitungen
 
