@@ -1,6 +1,8 @@
 # Sicherheit von Webanwendungen
 
-Eine Anleitung um Web-Anwendungen abzusichern. In erster Linie um Daten zu schützen:
+Dies ist eine Anleitung um Web-Anwendungen abzusichern.
+
+In erster Linie um Daten zu schützen:
 
 * Ausspionieren von Daten und Datenklau (z.B. Entwenden von Logindaten)
 
