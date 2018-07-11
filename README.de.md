@@ -535,26 +535,18 @@ In Bearbeitung...
 #### 1.11.1 Beispiel via `.htaccess`
 
 ```bash
+# other security header
 Header unset X-Powered-By
+ServerSignature Off
+SetEnvIf Range (,.*?){5,} bad-range=1
+RequestHeader unset Range env=bad-range
+LimitRequestBody 2147483647
 
-
+# general settings
 AddDefaultCharset UTF-8
 AddLanguage de-DE .html .htm .css .js
 AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 SetEnv TZ Europe/Berlin
-
-# Only allow JavaScript from the same domain to be run.
-# Don not allow inline JavaScript to run.
-Header set X-Content-Security-Policy "allow 'self';"
-# Prevent mime based attacks
-Header set X-Content-Type-Options "nosniff"
-# Disable server sign
-ServerSignature Off
-# drop Range header when more than 5 ranges. CVE-2011-3192
-SetEnvIf Range (,.*?){5,} bad-range=1
-RequestHeader unset Range env=bad-range
-# LIMIT UPLOAD FILE SIZE TO PROTECT AGAINST DOS ATTACK. Bytes, 0-2147483647(2GB)
-LimitRequestBody 2147483647
 ```
 
 ## A. Weitere Anleitungen
