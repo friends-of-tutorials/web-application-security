@@ -177,7 +177,23 @@ Das obige Beispiel schließt "Inline"-Ausführungen aus und beschränkt die vert
 * X-Content-Security-Policy
 * X-Webkit-CSP
 
-Diese sind "veraltet" (deprecated). Es ist durchaus dennoch eine gute Idee diese parallel mit zu integrieren. Sie auch: [content-security-policy.com](https://content-security-policy.com/)
+Diese sind "veraltet" (deprecated). Es ist durchaus dennoch eine gute Idee diese parallel mit zu integrieren:
+
+```bash
+# ----------------------------------------------------------------------
+# | Content Security Policy (CSP)                                      |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "script-src 'self' https://code.jquery.com;" env=content-type-default
+    Header set Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval';" env=content-type-typo3
+    Header set X-Content-Security-Policy "script-src 'self' https://code.jquery.com;" env=content-type-default
+    Header set X-Content-Security-Policy "script-src 'self' 'unsafe-inline' 'unsafe-eval';" env=content-type-typo3
+    Header set X-Webkit-CSP "script-src 'self' https://code.jquery.com;" env=content-type-default
+    Header set X-Webkit-CSP "script-src 'self' 'unsafe-inline' 'unsafe-eval';" env=content-type-typo3
+</IfModule>
+```
+
+Sie auch: [content-security-policy.com](https://content-security-policy.com/)
 
 ### 1.3 Clickjacking & Cross-Site-Request-Forgery (CSRF) mittels Inlineframes
 
