@@ -524,9 +524,11 @@ Mit Hilfe des Headers `Referrer-Policy` kann man die Übertragung einschränken.
 
 In Bearbeitung...
 
-### 1.10 Content sniffing
+### 1.10 Content sniffing (MIME Sniffing)
 
-In Bearbeitung...
+[Content sniffing](https://en.wikipedia.org/wiki/Content_sniffing)
+
+Hochgeladene Elemente entsprechen nicht dem gewünschten Inhaltselement. Z.B. Javascript statt Bild. Eingebundenes Javascript-Bild wird eingebunden und ausgeführt.
 
 #### 1.10.1 Problem
 
