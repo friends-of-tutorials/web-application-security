@@ -96,7 +96,7 @@ Der ungewollt importierte und ausgespielte Schadcode ermöglicht es z.B. Session
   * Einbinden fremder Quellen in das Webprojekt (z.B. über die Paketverwaltung: npm, composer, etc.)
   * etc.
 
-Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden (um z.B. wichtige Daten zu entwenden). Generell ist es immer eine gute Idee alle möglichen Importe zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Varianten zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
+Werden diese kompromitierten Daten ungeprüft an den Client (Browser) gesendet, können diese im ungünstigsten Fall zur Ausführung gebracht werden (um z.B. ungewollt wichtige Daten zu entwenden). Generell ist es immer eine gute Idee alle möglichen Importe zu überwachen und gegebenenfalls zu filtern. Durch die unzählige Anzahl an Importmöglichkeiten, die Möglichkeit den schadhaften Code in unzähligen Varianten zu verschleiern, sollte man zusätzlich die Ausführungsebenen des Scriptings einschränken:
 
 * Inline-Scripting generell verbieten und in externe Dateien in vertrauenswürdige Quellen auslagern, weil die Unterscheidung von eigenem (gutartigem) Code zu schadhaften Code beim Inline-Scripting besonders schwierig ist
 * Nur vertrauenswürdige Quellen beim Nachladen der Script-Dateien erlauben
