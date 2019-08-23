@@ -516,7 +516,7 @@ Mit Hilfe des Headers `Referrer-Policy` kann man die Übertragung einschränken.
 # | Referrer Policy (RP)                                               |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-    Referrer-Policy: no-referrer-when-downgrade
+    Header always set Referrer-Policy "no-referrer-when-downgrade"
 </IfModule>
 ```
 
@@ -524,11 +524,9 @@ Mit Hilfe des Headers `Referrer-Policy` kann man die Übertragung einschränken.
 
 In Bearbeitung...
 
-### 1.10 Content sniffing (MIME Sniffing)
+### 1.10 Feature Policy
 
-[Content sniffing](https://en.wikipedia.org/wiki/Content_sniffing)
-
-Hochgeladene Elemente entsprechen nicht dem gewünschten Inhaltselement. Z.B. Javascript statt Bild. Eingebundenes Javascript-Bild wird eingebunden und ausgeführt.
+In Bearbeitung...
 
 #### 1.10.1 Problem
 
@@ -542,10 +540,10 @@ In Bearbeitung...
 
 ```bash
 # ----------------------------------------------------------------------
-# | Content sniffing                                                   |
+# | Feature Policy (RP)                                               |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-    Header append X-Content-Type-Options "nosniff"
+    Header always set Feature-Policy "geolocation 'none'; midi 'none'; camera 'none'; usb 'none'; magnetometer 'none'; accelerometer 'none'; vr 'none'; speaker 'none'; ambient-light-sensor 'none'; gyroscope 'none'; microphone 'none'"
 </IfModule>
 ```
 
@@ -553,23 +551,52 @@ In Bearbeitung...
 
 In Bearbeitung...
 
-### 1.11 DDoS
+### 1.11 Content sniffing (MIME Sniffing)
+
+[Content sniffing](https://en.wikipedia.org/wiki/Content_sniffing)
+
+Hochgeladene Elemente entsprechen nicht dem gewünschten Inhaltselement. Z.B. Javascript statt Bild. Eingebundenes Javascript-Bild wird eingebunden und ausgeführt.
+
+#### 1.11.1 Problem
 
 In Bearbeitung...
 
-#### 1.10.1 Problem
+#### 1.11.2 Lösung
 
 In Bearbeitung...
 
-#### 1.10.2 Lösung
+#### 1.11.3 Beispiel via `.htaccess`
 
-In Bearbeitung...
-
-#### 1.10.3 Beispiel via `.htaccess`
-
-In Bearbeitung...
+```bash
+# ----------------------------------------------------------------------
+# | Content sniffing                                                   |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header append X-Content-Type-Options "nosniff"
+</IfModule>
+```
 
 #### 1.11.4 Hinweise
+
+In Bearbeitung...
+
+### 1.12 DDoS
+
+In Bearbeitung...
+
+#### 1.12.1 Problem
+
+In Bearbeitung...
+
+#### 1.12.2 Lösung
+
+In Bearbeitung...
+
+#### 1.12.3 Beispiel via `.htaccess`
+
+In Bearbeitung...
+
+#### 1.12.4 Hinweise
 
 In Bearbeitung...
 
