@@ -450,6 +450,17 @@ user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username pass
 </If>
 
 # ----------------------------------------------------------------------
+# | Password protection for the entire page                            |
+# ----------------------------------------------------------------------
+<If "%{HTTP_HOST} =~ /(www\.)?(domain1|domain2)\.de/">
+    AuthType     Basic
+    AuthName     "rsm"
+    AuthUserFile /var/www/path/to/web/root/current/web/.htpasswd
+    require      valid-user
+</If>
+
+
+# ----------------------------------------------------------------------
 # | Block access of some areas (always)                                |
 # ----------------------------------------------------------------------
 <IfModule mod_alias.c>
