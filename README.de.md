@@ -384,6 +384,17 @@ In Bearbeitung...
 </IfModule>
 ```
 
+```
+# ----------------------------------------------------------------------
+# | Secure Cookies                              |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header edit Set-Cookie "(?i)^((?:(?!;\s?secure).)+)$" "$1; Secure"
+    Header edit Set-Cookie "(?i)^((?:(?!;\s?httponly).)+)$" "$1; HTTPOnly"
+    Header edit Set-Cookie "(?i)^((?:(?!;\s?samesite=).)+)$" "$1; SameSite=Lax"
+</IfModule>
+```
+
 #### 1.6.4 Hinweise
 
 In Bearbeitung...
