@@ -376,7 +376,7 @@ In Bearbeitung...
 
 ```bash
 # ----------------------------------------------------------------------
-# | Secure Cookies                              |
+# | Secure Cookies                                                     |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header edit Set-Cookie "^(.*)$" "$1; HttpOnly; Secure" env=content-type-default
@@ -386,7 +386,7 @@ In Bearbeitung...
 
 ```
 # ----------------------------------------------------------------------
-# | Secure Cookies                              |
+# | Secure Cookies                                                     |
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
     Header edit Set-Cookie "(?i)^((?:(?!;\s?secure).)+)$" "$1; Secure"
