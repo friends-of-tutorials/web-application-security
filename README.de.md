@@ -483,8 +483,8 @@ user$ htpasswd -cb /var/www/path/to/web/root/current/web/.htpasswd username pass
 # | the SPECIAL_STRING)                                                |
 # ----------------------------------------------------------------------
 <If "%{HTTP_USER_AGENT} !~ /\[SPECIAL_STRING\]/">
-    RedirectMatch 404 /log
-    RedirectMatch 404 /revision-infos
+    RedirectMatch 404 ^/log
+    RedirectMatch 404 ^/revision-infos
 </If>
 ```
 
